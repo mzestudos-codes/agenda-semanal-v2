@@ -1034,6 +1034,10 @@
       "sha256": "05cf36610931361a69b509d982e4dbca2271fb7babc3f8bbfb2cdfee728ad588",
       "type": "image/png"
     },
+    "Icones/MZ/MZArena.png": {
+      "sha256": "520efba3db6e3b872a8110aa47d9ba51992f3720f39d2b7dd20a041ffacc7472",
+      "type": "image/png"
+    },
     "Icones/Maestro.png": {
       "sha256": "08103fe5a2ec3bf41ca4589668da65f2563720a6bdd3ee69cc8744abff4e29f5",
       "type": "image/png"
