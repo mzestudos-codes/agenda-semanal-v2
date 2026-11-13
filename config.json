@@ -1,4 +1,5 @@
 {
-  "github_repository": "SEU_USUARIO/agenda-assets",
-  "github_branch": "main"
+  "github_repository": "mzestudos-codes/agenda-semanal-v2",
+  "github_branch": "master",
+  "github_assets_subdir": "agenda-assets"
 }

@@ -49,7 +49,7 @@ def desired_paths(data,logger):
     logger.info('Recursos requeridos: %d',len(required))
     return required
 
-def obtain_assets(data,temporary_dir,logger,repository=None,branch='main',local_assets=None):
+def obtain_assets(data,temporary_dir,logger,repository=None,branch='main',local_assets=None,assets_subdir=''):
     required=desired_paths(data,logger)
     if local_assets is not None:
         # Exclusivamente para teste e auditoria local; produção exige GitHub.
@@ -61,12 +61,14 @@ def obtain_assets(data,temporary_dir,logger,repository=None,branch='main',local_
         if not repository or not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repository):raise AgendaError('Configure o repositório público GitHub no arquivo config.json (campo github_repository).')
         if repository.startswith('SEU_USUARIO/'):
             raise AgendaError('Configure o repositório GitHub público em config.json antes de gerar a agenda.')
+        assets_subdir = safe_rel(assets_subdir.strip('/')) if assets_subdir else ''
         commit=json.loads(fetch(f'{API}/repos/{repository}/commits/{quote(branch,safe="")}'))['sha']
         base=f'{PREFIX}/{repository}/{commit}'
-        manifest=json.loads(fetch(base+'/manifest.json'))
+        prefix = assets_subdir + '/' if assets_subdir else ''
+        manifest=json.loads(fetch(base+'/'+quote(prefix+'manifest.json',safe='/')))
         idx=manifest_index(manifest)
         logger.info('GitHub: %s, revisão %s',repository,commit)
-        def read_asset(p):return fetch(base+'/'+quote(p,safe='/'))
+        def read_asset(p):return fetch(base+'/'+quote(prefix+p,safe='/'))
     missing = sorted((name for name in required if name.casefold() not in idx), key=str.casefold)
     if missing:
         locations = {}

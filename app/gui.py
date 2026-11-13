@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk,filedialog,messagebox
 from .engine import run
 
-DEFAULT_CONFIG={'github_repository':'SEU_USUARIO/agenda-assets','github_branch':'main'}
+DEFAULT_CONFIG={'github_repository':'mzestudos-codes/agenda-semanal-v2','github_branch':'master','github_assets_subdir':'agenda-assets'}
 
 def config_path():
     # Em executáveis PyInstaller, configuração editável ao lado do .exe.
@@ -30,7 +30,7 @@ def main():
         def job():
             try:
                 config=json.loads(config_path().read_text(encoding='utf8'))
-                run(file,repository=config['github_repository'],branch=config.get('github_branch','main'))
+                run(file,repository=config['github_repository'],branch=config.get('github_branch','master'),assets_subdir=config.get('github_assets_subdir',''))
             except Exception as exc:
                 message=str(exc)
                 def report():

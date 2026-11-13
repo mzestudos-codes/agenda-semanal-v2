@@ -181,7 +181,7 @@ def _publish(excel, candidate, png_files, folder, year, logger, temp_root):
             pass
 
 
-def run(excel_path, repository=None, branch='main', local_assets=None, open_results=True):
+def run(excel_path, repository=None, branch='main', local_assets=None, open_results=True, assets_subdir=''):
     excel = Path(excel_path).expanduser().resolve()
     assert_excel_access(excel)
     logger = logger_for(excel)
@@ -215,7 +215,7 @@ def run(excel_path, repository=None, branch='main', local_assets=None, open_resu
                 'dias': data,
             }, ensure_ascii=False, indent=2, default=str), encoding='utf-8')
             logger.info('JSON temporário de ordenação criado com %d dias', len(data))
-            assets = obtain_assets(data, tmp_root / 'assets', logger, repository=repository, branch=branch, local_assets=local_assets)
+            assets = obtain_assets(data, tmp_root / 'assets', logger, repository=repository, branch=branch, local_assets=local_assets, assets_subdir=assets_subdir)
             png_dir = tmp_root / 'png'
             png_dir.mkdir()
             png_files = {}

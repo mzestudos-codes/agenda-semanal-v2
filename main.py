@@ -15,7 +15,7 @@ def main():
     args=parser.parse_args()
     if args.excel:
         config = json.loads(config_path().read_text(encoding='utf-8')) if config_path().is_file() else {}
-        folder=run(args.excel,repository=args.repository or config.get('github_repository'),branch=args.branch or config.get('github_branch','main'),local_assets=args.assets_dir,open_results=not args.no_open)
+        folder=run(args.excel,repository=args.repository or config.get('github_repository'),branch=args.branch or config.get('github_branch','master'),assets_subdir=config.get('github_assets_subdir',''),local_assets=args.assets_dir,open_results=not args.no_open)
         print(folder)
     else:gui_main()
 
