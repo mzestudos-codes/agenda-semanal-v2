@@ -79,7 +79,7 @@ def paste_arena(image, assets, x, y, company_icon_size, font, time_text):
         )
     try:
         logo_x = x + (company_icon_size[0] - target_width) // 2
-        logo_y = time_bottom + spacing
+        logo_y = time_bottom + spacing + 5
         image.paste(logo, (logo_x, logo_y), logo)
     finally:
         logo.close()
