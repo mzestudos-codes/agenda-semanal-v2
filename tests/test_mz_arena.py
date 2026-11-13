@@ -45,3 +45,31 @@ class ArenaTests(unittest.TestCase):
         wb.close()
 
 if __name__=='__main__':unittest.main()
+
+class ArenaLayoutTests(unittest.TestCase):
+    def test_selo_resizes_to_presencial_width_without_moving_existing_content(self):
+        from tempfile import TemporaryDirectory
+        from pathlib import Path
+        from PIL import Image, ImageFont
+        from app.render import paste_arena, ARENA_ASSET
+        with TemporaryDirectory() as tmp:
+            path=Path(tmp)/'MZArena.png'
+            Image.new('RGBA',(50,7),(255,0,0,255)).save(path)
+            font=ImageFont.truetype('DejaVuSans.ttf',20)
+            base=Image.new('RGBA',(975,450),(255,255,255,255))
+            paste_arena(base,{ARENA_ASSET:path},47,150,(119,50),font,'10:00')
+            width=round(font.getlength('Presencial'))
+            height=round(width*7/50)
+            pixels=base.load()
+            xs=[];ys=[]
+            for yy in range(base.height):
+                for xx in range(base.width):
+                    if pixels[xx,yy][:3] == (255,0,0):
+                        xs.append(xx);ys.append(yy)
+            self.assertEqual(max(xs)-min(xs)+1,width)
+            self.assertEqual(max(ys)-min(ys)+1,height)
+            self.assertEqual(min(xs),47+(119-width)//2)
+            label_top=150+50+12
+            time_top=150+50+42
+            expected_y=time_top+font.getbbox('10:00')[3]+max(0,time_top-(label_top+font.getbbox('Presencial')[3]))
+            self.assertEqual(min(ys),expected_y)

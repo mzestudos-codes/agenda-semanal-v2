@@ -54,17 +54,35 @@ def draw_subtitles(draw, details, x, y, icon_size, font):
 ARENA_ASSET = 'Icones/MZ/MZArena.png'
 
 
-def paste_arena(image, assets, x, y, company_icon_size, font):
-    """Centraliza o selo 50x7 sob o horário, sem mudar o tamanho da imagem."""
-    # Horário do Investor Day é o terceiro subtítulo (idx=2).
-    # draw_subtitles: texto em y + altura_ícone + 12 + 30.
-    # O selo fica logo abaixo da linha de texto, com pequena margem.
+def paste_arena(image, assets, x, y, company_icon_size, font, time_text):
+    """Acrescenta selo abaixo do horário, sem mover textos ou alterar o canvas.
+
+    Largura igual à palavra 'Presencial' na fonte atual, proporção original
+    preservada, intervalo vertical igual ao intervalo modalidade/horário.
+    """
+    label_top = y + company_icon_size[1] + 12
     time_top = y + company_icon_size[1] + 42
-    bbox = font.getbbox('14:00')
-    line_height = bbox[3] - bbox[1]
-    logo_y = time_top + line_height + 6
-    logo_x = x + (company_icon_size[0] - 50) // 2
-    paste_icon(image, assets[ARENA_ASSET], (logo_x, logo_y), (50, 7))
+    label_bbox = font.getbbox('Presencial')
+    time_bbox = font.getbbox(str(time_text or ''))
+    label_bottom = label_top + label_bbox[3]
+    time_bottom = time_top + time_bbox[3]
+    spacing = max(0, time_top - label_bottom)
+
+    target_width = max(1, round(font.getlength('Presencial')))
+    with Image.open(assets[ARENA_ASSET]) as opened:
+        source_width, source_height = opened.size
+        if source_width <= 0 or source_height <= 0:
+            raise ValueError('O selo da MZ Arena tem dimensões inválidas.')
+        target_height = max(1, round(target_width * source_height / source_width))
+        logo = opened.convert('RGBA').resize(
+            (target_width, target_height), Image.Resampling.LANCZOS
+        )
+    try:
+        logo_x = x + (company_icon_size[0] - target_width) // 2
+        logo_y = time_bottom + spacing
+        image.paste(logo, (logo_x, logo_y), logo)
+    finally:
+        logo.close()
 
 
 def render_day(groups, day_index, day_date, assets):
@@ -108,7 +126,7 @@ def render_day(groups, day_index, day_date, assets):
                 subtitles = ('', event.get('modalidade'), event.get('horario'))
             draw_subtitles(draw, subtitles, icon_x, icon_y, size, body_font)
             if category=='investor_day' and event.get('mz_arena'):
-                paste_arena(image,assets,icon_x,icon_y,size,body_font)
+                paste_arena(image,assets,icon_x,icon_y,size,body_font,event.get('horario'))
 
     paste_icon(image, assets['Icones/MZ/icon-calendar@3x.png'], (632, 30), (40, 40))
     draw.text((680, 30), f'{day_date.day:02d}', font=weekday_font, fill='#33a0ff')

@@ -95,7 +95,7 @@ def render_daily(groups,day,assets):
             else:details=('',event['modalidade'],event['horario'])
             draw_subtitles(draw,details,x,y,size,body)
             if cat=='investor_day' and event.get('mz_arena'):
-                paste_arena(image,assets,x,y,size,body)
+                paste_arena(image,assets,x,y,size,body,event.get('horario'))
     paste_icon(image,assets['Icones/MZ/icon-calendar@3x.png'],(652,30),(40,40))
     draw.text((700,30),f'{day.day:02d}',font=heading,fill='#33a0ff')
     draw.text((745,30),WEEKDAYS[day.weekday()],font=heading,fill='#33a0ff')
