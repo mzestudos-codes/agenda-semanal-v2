@@ -9,6 +9,7 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from PIL import Image, ImageTk
+import sv_ttk
 from .mercado import run
 from . import github_icons as gh
 
@@ -19,43 +20,47 @@ def config_path():
     return Path(__file__).resolve().parent.parent/'config.json'
 
 def main():
-    root=tk.Tk();root.title('AgendaMercado');root.geometry('780x690');root.minsize(690,620)
-    root.columnconfigure(0,weight=1);root.rowconfigure(2,weight=1)
-    root.configure(bg='#F8FAFC')
-    style=ttk.Style(root)
-    if 'clam' in style.theme_names():style.theme_use('clam')
-    style.configure('TFrame',background='#F8FAFC')
-    style.configure('TLabel',background='#F8FAFC',foreground='#0F172A',font=('Segoe UI',10))
-    style.configure('Sub.TLabel',foreground='#64748B')
-    style.configure('Title.TLabel',font=('Segoe UI',19,'bold'))
-    style.configure('TButton',font=('Segoe UI',10),padding=(12,8))
-    style.configure('Accent.TButton',foreground='#FFFFFF',background='#2563EB',font=('Segoe UI',10,'bold'),padding=(14,10))
-    style.map('Accent.TButton',background=[('active','#1D4ED8')])
-    style.configure('TNotebook.Tab',padding=(18,11),font=('Segoe UI',10,'bold'))
+    root = tk.Tk()
+    root.title('AgendaMercado')
+    root.geometry('900x760')
+    root.minsize(780,680)
+    root.configure(bg='#F7F9FC')
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(2, weight=1)
+
+    # Sun Valley ttk: tema claro com estilos nativos consistentes.
+    sv_ttk.set_theme('light')
+    style = ttk.Style(root)
+    style.configure('Header.TLabel', font=('Segoe UI', 22, 'bold'))
+    style.configure('Section.TLabel', font=('Segoe UI', 12, 'bold'))
+    style.configure('Hint.TLabel', foreground='#64748B')
+    style.configure('Status.TLabel', foreground='#475569')
+    style.configure('TNotebook.Tab', padding=(22, 12))
+    style.configure('Accent.TButton', font=('Segoe UI', 10, 'bold'))
     config={**DEFAULT_CONFIG,**(json.loads(config_path().read_text(encoding='utf-8')) if config_path().exists() else {})}
     filepath=tk.StringVar(value='Nenhum arquivo selecionado')
-    ttk.Label(root,text='AgendaMercado',style='Title.TLabel').grid(row=0,column=0,sticky='w',padx=24,pady=(16,2))
-    ttk.Label(root,text='Agendas de eventos  •  Geração e biblioteca compartilhada',style='Sub.TLabel').grid(row=1,column=0,sticky='w',padx=24,pady=(0,13))
-    notebook=ttk.Notebook(root);notebook.grid(row=2,column=0,sticky='nsew',padx=20,pady=(0,18))
-    agenda=ttk.Frame(notebook,padding=22);agenda.columnconfigure(0,weight=1)
-    panel=ttk.Frame(notebook,padding=22);panel.columnconfigure(1,weight=1)
+    ttk.Label(root,text='AgendaMercado',style='Header.TLabel').grid(row=0,column=0,sticky='w',padx=24,pady=(16,2))
+    ttk.Label(root,text='Agendas de eventos  •  Geração e biblioteca compartilhada',style='Hint.TLabel').grid(row=1,column=0,sticky='w',padx=24,pady=(0,13))
+    notebook=ttk.Notebook(root);notebook.grid(row=2,column=0,sticky='nsew',padx=24,pady=(0,16))
+    agenda=ttk.Frame(notebook,padding=28);agenda.columnconfigure(0,weight=1)
+    panel=ttk.Frame(notebook,padding=24);panel.columnconfigure(1,weight=1)
     notebook.add(agenda,text='Gerar agendas');notebook.add(panel,text='Gerenciar ícones')
-    ttk.Label(agenda,text='Arquivo Excel (.xlsx)',font=('Segoe UI',11,'bold')).grid(row=0,column=0,sticky='w',pady=(0,10))
-    ttk.Label(agenda,textvariable=filepath,wraplength=430,style='Sub.TLabel').grid(row=1,column=0,sticky='w')
+    ttk.Label(agenda,text='1. Selecione a planilha',style='Section.TLabel').grid(row=0,column=0,sticky='w',pady=(0,10))
+    ttk.Label(agenda,textvariable=filepath,wraplength=430,style='Hint.TLabel').grid(row=1,column=0,sticky='w')
     def choose_excel():
         selected=filedialog.askopenfilename(title='Selecione a planilha Excel',filetypes=[('Excel','*.xlsx')])
         if selected:filepath.set(selected);generate.configure(state='normal')
-    ttk.Button(agenda,text='Selecionar Excel',command=choose_excel).grid(row=1,column=1,padx=(12,0))
+    ttk.Button(agenda,text='Procurar arquivo…',command=choose_excel).grid(row=1,column=1,padx=(12,0))
     ttk.Separator(agenda).grid(row=2,column=0,columnspan=2,sticky='ew',pady=22)
-    ttk.Label(agenda,text='Modalidade',font=('Segoe UI',11,'bold')).grid(row=3,column=0,sticky='w')
+    ttk.Label(agenda,text='2. Escolha o que gerar',style='Section.TLabel').grid(row=3,column=0,sticky='w')
     selected_mode=tk.StringVar(value='semanal')
     for index,(value,label) in enumerate((('semanal','Agenda Semanal'),('diaria','Agenda Diária'),('ambas','Ambas as agendas')),4):
         ttk.Radiobutton(agenda,text=label,variable=selected_mode,value=value).grid(row=index,column=0,columnspan=2,sticky='w',pady=7)
-    ttk.Label(agenda,text='Saída: Imagens/Semanal e Imagens/Diaria, organizadas por período',style='Sub.TLabel').grid(row=7,column=0,columnspan=2,sticky='w',pady=(16,14))
+    ttk.Label(agenda,text='Saída: Imagens/Semanal e Imagens/Diaria, organizadas por período',style='Hint.TLabel').grid(row=7,column=0,columnspan=2,sticky='w',pady=(16,14))
     generate=ttk.Button(agenda,text='Gerar agendas',style='Accent.TButton',state='disabled');generate.grid(row=8,column=0,columnspan=2,sticky='ew')
     progress=ttk.Progressbar(agenda,mode='indeterminate');progress.grid(row=9,column=0,columnspan=2,sticky='ew',pady=(18,7))
     progress_label=tk.StringVar(value='Pronto para gerar.')
-    ttk.Label(agenda,textvariable=progress_label,style='Sub.TLabel',wraplength=560).grid(row=10,column=0,columnspan=2,sticky='w')
+    ttk.Label(agenda,textvariable=progress_label,style='Hint.TLabel',wraplength=560).grid(row=10,column=0,columnspan=2,sticky='w')
     def execute():
         file=filepath.get();requested_mode=selected_mode.get();generate.configure(state='disabled',text='Processando...');progress.start(12)
         def update(message):root.after(0,lambda text=message:progress_label.set(text))
@@ -93,8 +98,10 @@ def main():
                 root.after(0,success)
         threading.Thread(target=job,daemon=True).start()
     generate.configure(command=execute)
-    ttk.Label(panel,text='Biblioteca de ícones',font=('Segoe UI',13,'bold')).grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,6))
-    ttk.Label(panel,text='Ícones compartilhados com a equipe pelo GitHub.',style='Sub.TLabel').grid(row=1,column=0,columnspan=2,sticky='w',pady=(0,14))
+    root.bind('<Control-o>', lambda _event: choose_excel() if generate['state'] != 'disabled' else choose_excel())
+    root.bind('<Control-Return>', lambda _event: execute() if generate['state'] == 'normal' else None)
+    ttk.Label(panel,text='Biblioteca de ícones',style='Section.TLabel').grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,6))
+    ttk.Label(panel,text='Ícones compartilhados com a equipe pelo GitHub.',style='Hint.TLabel').grid(row=1,column=0,columnspan=2,sticky='w',pady=(0,14))
     editor=ttk.LabelFrame(panel,text='Cadastro de ícones',padding=14);editor.grid(row=2,column=0,columnspan=2,sticky='nsew');editor.columnconfigure(1,weight=1)
     mode=tk.StringVar(value='add');company=tk.StringVar();png_path=tk.StringVar(value='Nenhum PNG selecionado');status=tk.StringVar(value='Os ícones são publicados diretamente no GitHub.')
     token=[None];loaded=[False];current_names=[[]];new_bytes=[None];old_bytes=[None];busy=[False];cancel=threading.Event()
@@ -220,4 +227,5 @@ def main():
         async_task(lambda:gh.publish_icon(config,token[0],name,new_bytes[0],replace),done)
     connect.configure(command=connect_github);refresh.configure(command=refresh_names);publish.configure(command=publish_icon)
     update_mode()
+    ttk.Label(root, text='AgendaMercado  •  Ctrl+O: selecionar Excel  •  Ctrl+Enter: gerar', style='Hint.TLabel').grid(row=3,column=0,sticky='w',padx=26,pady=(0,12))
     root.mainloop()
