@@ -100,9 +100,15 @@ def restore_formula_cache(original, candidate):
             with ZipFile(temp_path, 'w') as output:
                 for item in current.infolist():
                     output.writestr(item, updated if item.filename == dst_entry else current.read(item.filename))
-            os.replace(temp_path, candidate)
-        finally:
+        except BaseException:
             temp_path.unlink(missing_ok=True)
+            raise
+    # Os arquivos ZIP de entrada precisam estar fechados antes do replace.
+    # Em Windows, substituir um XLSX ainda aberto pelo ZipFile gera WinError 5.
+    try:
+        os.replace(temp_path, candidate)
+    finally:
+        temp_path.unlink(missing_ok=True)
     return restored
 
 
