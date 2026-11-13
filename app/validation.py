@@ -3,10 +3,10 @@ from __future__ import annotations
 from datetime import datetime, time, timedelta, date
 import re
 
-DAYS = [('segunda',4,8,'P4'),('terca',12,16,'AB4'),('quarta',20,24,'AN4'),('quinta',28,32,'AZ4'),('sexta',36,40,'BL4')]
+DAYS = [('segunda',4,8,'Q4'),('terca',12,16,'AC4'),('quarta',20,24,'AO4'),('quinta',28,32,'BA4'),('sexta',36,40,'BM4')]
 CATEGORIES = ('divulgacoes','conferencias','investor_day')
 MARKERS = {'divulgacoes':'VejaMaisDivulgacoes','conferencias':'VejaMaisConferencias','investor_day':'VejaMaisInvestorDay'}
-PRIORITY = {'antes abert.':0,'após fech.':1,'-':2}
+PRIORITY = {'antes abert.':0,'após fech.':1,'-':2,'sem informação':2}
 NON_TIMES = {'trad. simul.','sem informação','-'}
 
 class AgendaError(Exception):
@@ -45,23 +45,34 @@ def parse_time(value):
     if m and int(m[1])<24 and int(m[2])<60:return int(m[1])*3600+int(m[2])*60
     raise AgendaError(f'Horário não interpretável: {value!r}')
 
+def arena_flag(value, location):
+    """Coluna I: somente Sim ou vazio; evita omissões silenciosas."""
+    if empty(value):
+        return False
+    if isinstance(value, str) and value.strip().casefold() == 'sim':
+        return True
+    raise AgendaError(f'{location}: use Sim ou deixe a célula vazia para MZ Arena.')
+
+
 def validate_and_sort(ws,logger):
     result={}
     for day,first,last,anchor in DAYS:
         groups={c:[] for c in CATEGORIES}
         for row in range(first,last+1):
-            for category,company_col,extra_cols in [('divulgacoes','A',('J',)),('conferencias','C',('K','L')),('investor_day','F',('M','N'))]:
+            for category,company_col,extra_cols in [('divulgacoes','A',('K',)),('conferencias','C',('L','M')),('investor_day','F',('N','O'))]:
                 name=clean_name(ws[f'{company_col}{row}'].value)
                 if not name:continue
                 m=marker_type(name)
                 if m and m not in ('*',category):raise AgendaError(f'{day}: marcador {name} na categoria incorreta ({category}), linha {row}.')
                 fields={key:normalized(ws[f'{col}{row}'].value) for key,col in zip({'divulgacoes':('periodo',),'conferencias':('horario_pt','horario_en'),'investor_day':('modalidade','horario')}[category],extra_cols)}
                 event={'empresa':MARKERS[category] if m else name,**fields,'linha_excel':row,'posicao_original':len(groups[category])+1,'marcador':bool(m)}
+                if category=='investor_day':
+                    event['mz_arena']=arena_flag(ws[f'I{row}'].value,f'{day}, I{row}') if not m else False
                 if not m:
                     if category=='divulgacoes':
                         p=fields['periodo']
-                        if empty(p):raise AgendaError(f'{day}: período vazio em J{row} para {name}.')
-                        if not isinstance(p,str) or p.strip().casefold() not in PRIORITY:raise AgendaError(f'{day}: período inválido em J{row}: {p!r}.')
+                        if empty(p):raise AgendaError(f'{day}: período vazio em K{row} para {name}.')
+                        if not isinstance(p,str) or p.strip().casefold() not in PRIORITY:raise AgendaError(f'{day}: período inválido em K{row}: {p!r}.')
                         event['_order']=(PRIORITY[p.strip().casefold()],name.casefold())
                     elif category=='conferencias':
                         try: vals=[parse_time(x) for x in (fields['horario_pt'],fields['horario_en'])]
@@ -92,7 +103,7 @@ def validate_and_sort(ws,logger):
                 event['posicao_ordenada']=idx
                 event.pop('_order',None)
                 if idx != event['posicao_original']:
-                    criterio = ('período em J e nome alfabético' if category == 'divulgacoes'
+                    criterio = ('período em K e nome alfabético' if category == 'divulgacoes'
                                 else 'menor horário disponível e nome alfabético')
                     logger.info('%s | %s | %s | posição %s -> %s | critério: %s',
                                 day, category, event['empresa'], event['posicao_original'], idx, criterio)
@@ -106,10 +117,10 @@ MONTHS=('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','
 WEEK_DAYS=('Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira')
 
 def read_week_dates(ws):
-    """A planilha atual usa a data de segunda em I2 e datas das demais linhas."""
+    """A planilha atual usa a data de segunda em J2 e datas das demais linhas."""
     items=[]
     for idx, row in enumerate((2,9,17,25,33)):
-        raw=ws[f'I{row}'].value
+        raw=ws[f'J{row}'].value
         if isinstance(raw,datetime):d=raw.date()
         elif isinstance(raw,date):d=raw
         elif isinstance(raw,(int,float)):
@@ -120,9 +131,9 @@ def read_week_dates(ws):
             for fmt in ('%d/%m/%Y','%Y-%m-%d','%d-%m-%Y'):
                 try:d=datetime.strptime(raw.strip(),fmt).date();break
                 except ValueError:pass
-            if d is None:raise AgendaError(f'Data não reconhecida em I{row}: {raw!r}.')
-        else:raise AgendaError(f'Data ausente em I{row}: salve a planilha após recalcular as fórmulas no Excel.')
-        if d.weekday()!=idx:raise AgendaError(f'Data inconsistente em I{row}: {d:%d/%m/%Y}, esperado {WEEK_DAYS[idx]}.')
+            if d is None:raise AgendaError(f'Data não reconhecida em J{row}: {raw!r}.')
+        else:raise AgendaError(f'Data ausente em J{row}: salve a planilha após recalcular as fórmulas no Excel.')
+        if d.weekday()!=idx:raise AgendaError(f'Data inconsistente em J{row}: {d:%d/%m/%Y}, esperado {WEEK_DAYS[idx]}.')
         if items and (d-items[-1]).days!=1:raise AgendaError('As datas da semana não são consecutivas.')
         items.append(d)
     return dict(zip((x[0] for x in DAYS),items))

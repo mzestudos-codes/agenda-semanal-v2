@@ -1,121 +1,79 @@
-# Agenda Semanal — Aplicação integrada (Windows)
+# AgendaMercado — código-fonte Python
 
-Aplicativo Python para validar/ordenar a planilha `Agenda`, compor imagens com o **mesmo layout do script original**, atualizar o próprio `.xlsx` e salvar os PNGs da semana. **Os ícones, fundos e fontes são consultados em um repositório GitHub público a cada execução e descartados após o uso.** Não requer login.
+Aplicação desktop Windows para gerar **Agenda Semanal**, **Agenda Diária** ou **Ambas**, preservando os layouts das agendas e o gerenciador de ícones GitHub.
 
-## O que está implementado
+## Executar
 
-- Reutilização das regras do MVP de validação e ordenação (`main.py` original), incorporando divulgação com `J = "-"` em último lugar e marcadores na quinta posição.
-- Visual preservado. A composição foi comparada **pixel a pixel** com as cinco saídas do `Agenda_Semanal_Old.py`, mantendo a ordem original exclusivamente no teste visual; todas tiveram diferença zero.
-- Dias sem eventos não geram imagens. As imagens antigas da agenda desses dias são removidas do Excel.
-- Validação de ausência de ícones/fundos antes da renderização, com indicação de arquivo e dia para ícones de empresas.
-- Recursos obtidos do GitHub público **sem cache permanente**, somente os necessários, a partir de uma revisão fixada no começo da execução e conferidos com SHA-256.
-- Inserção seletiva nas posições `P4`, `AB4`, `AN4`, `AZ4`, `BL4`, sem remover imagens de outras posições.
-- Preservação das fórmulas **e dos seus resultados previamente calculados** após atualizar as imagens do Excel. O aplicativo não calcula fórmulas.
-- PNGs ao lado do Excel, em `Agenda_Semanal_09Novembro_13Novembro`, com nomes `Agenda_09Novembro.png`, etc. Reexecuções atualizam/removem os PNGs antigos de agenda.
-- Logs ao lado do Excel em `Logs/`, com retenção de 30 dias.
-- Interface com dois botões, mensagem `Processando...`, sem pop-up de sucesso. Ao terminar, abre Excel e pasta.
-- Salvamento com cópia temporária, substituição atômica por arquivo e tentativa de recuperação em caso de falha. Não é uma transação ACID entre vários arquivos.
-
-## Passo 1 — Publicar recursos no GitHub
-
-O ZIP `AgendaSemanal_Recursos_GitHub.zip` acompanha esta entrega e contém 434 recursos e `manifest.json`. **O repositório não é publicado automaticamente**; você precisa criar um repositório **público** na sua conta GitHub, por exemplo, `seu-usuario/agenda-assets`, e enviar o conteúdo extraído da pasta `repo_github` para a raiz dele.
-
-A organização que deve aparecer no GitHub é:
-
-```text
-manifest.json
-Icones/
-Fundo/
-Fonte/
-```
-
-**Não altere acentos nos nomes dos arquivos.** No projeto, os nomes foram recuperados da codificação CP850 do ZIP original (ex.: `Ânima.png`, `icon-Divulgações@3x.png`).
-
-Na próxima atualização de PNG/TTF, rode `python tools_update_manifest.py /caminho/da/pasta/repo_github` **antes de enviar os arquivos ao GitHub**. O script recalcula os SHA-256. Sem atualizar o manifesto, o aplicativo bloqueará o uso de um arquivo alterado.
-
-## Passo 2 — Configurar o endereço público
-
-Edite `config.json`:
-
-```json
-{
-  "github_repository": "seu-usuario/agenda-assets",
-  "github_branch": "main"
-}
-```
-
-É necessário usar o nome real do **repositório de recursos**, e não a URL completa. No executável, o arquivo `config.json` fica **ao lado de `AgendaSemanal.exe`**, e não dentro dele.
-
-## Passo 3 — Executar e compilar no Windows
-
-Requer Python 3.10+ (recomendado 3.12). Em um terminal na pasta do projeto:
-
-```powershell
+```shell
 py -m pip install -r requirements.txt
 py main.py
 ```
 
-Para gerar o executável sem incluir os recursos visuais:
+A planilha `.xlsx` deve possuir as abas **Semanal** e **Diária** para executar ambas as modalidades. Para executar somente uma modalidade, basta a aba correspondente. A estrutura exige a nova coluna I (veja a seção MZ Arena). A Diária usa `J2` como data, `J3` como dia da semana calculado, e os eventos a partir da linha 3; a Semanal segue sua estrutura histórica, começando na linha 4.
 
-```bat
-build_windows.bat
+No Windows, executar `build_windows.bat` para compilar `dist/AgendaMercado.exe` e copiar `config.json`. **O executável não acompanha este ZIP**; a compilação precisa ocorrer em Windows.
+
+## Arquivos gerados
+
+```text
+Imagens/
+  Semanal/Agenda_Semanal_16-Novembro-2026.png
+  Diaria/Agenda_Diaria_13-Novembro-2026.png
+Logs/
 ```
 
-A saída será `dist/AgendaSemanal.exe` + `dist/config.json`. Distribua **esses dois arquivos juntos**. Não é necessário distribuir `repo_github/`, `Fonte/`, `Fundo/` ou `Icones/` com o EXE.
+O arquivo original Excel é atualizado somente depois de pré-validação, download dos ícones e renderização. Somente as imagens da aba escolhida são substituídas. Os PNGs históricos não são apagados; um arquivo da mesma data é substituído. Uma falha comum de publicação tenta restaurar Excel e imagens anteriores.
 
-Alternativamente, envie o **código da aplicação** para um repositório GitHub próprio: o fluxo `.github/workflows/build-windows.yml` permite compilar um EXE no GitHub Actions usando um runner Windows e baixar o pacote `AgendaSemanal-Windows` na aba *Actions*. **Não publique a planilha de exemplo da pasta `tests/fixtures` em um repositório público sem revisá-la**.
+## GitHub
 
-## Interface
+Preservados os campos `github_repository`, `github_branch`, `github_assets_subdir` e `github_oauth_client_id` de `config.json`. Os recursos visuais são baixados em tempo de execução do manifesto GitHub, sem distribuição de fontes ou ícones neste pacote.
 
-1. Abra o aplicativo.
-2. Clique em **Selecionar Excel** e escolha um `.xlsx` que contenha a aba `Agenda`.
-3. Clique em **Gerar agenda**. O botão exibirá `Processando...`.
-4. Com internet disponível, o programa busca recursos e prepara as saídas.
-5. Em caso de sucesso, abre o Excel atualizado e a pasta da semana. Não mostra mensagem de sucesso adicional.
+## Linha de comando
 
-**Feche o Excel antes de executar**, salve a planilha após qualquer edição para atualizar os resultados das fórmulas normalizadas. Em caso de erro, a mensagem explica o problema; detalhes ficam em `Logs/`.
+```shell
+py main.py --excel "C:\\Agenda\\Nomes.xlsx" --mode ambas --no-open
+```
+
+O argumento `--assets-dir` existe exclusivamente para testes locais.
 
 ## Testes
 
-```powershell
+```shell
 py -m unittest discover -s tests -v
 ```
 
-Os testes completos que dependem de recursos devem encontrar `repo_github/` na pasta do código. Testes com planilha real e comparação visual também requerem os arquivos de referência em `tests/fixtures/`. Os testes que não tiverem esses insumos são pulados automaticamente.
+Os testes de integração/visual existentes dependem de recursos ou arquivos de referência fora deste pacote e podem ficar marcados como `skipped`. Os testes unitários da Agenda Diária não dependem desses recursos.
 
-Para testar localmente **sem GitHub**, existe uma opção exclusiva de desenvolvimento:
+## Notas de validação
 
-```powershell
-py main.py --excel "C:\planilhas\NomesSemanal.xlsx" --assets-dir "C:\repo_github" --no-open
-```
+O renderizador diário foi reimplementado a partir do `diaria.py` antigo, com os posicionamentos, espaçamentos, cinco colunas e fontes de origem. Ainda é necessário comparar PNGs da versão antiga e da nova com dados equivalentes para comprovar identidade visual pixel a pixel. A interface utiliza `ttk` em tema claro, mantendo autenticação OAuth e ações de gerenciamento de ícones. Este código-fonte não foi compilado como EXE neste ambiente.
 
-O modo normal da interface **sempre consulta o GitHub**. A opção `--assets-dir` não é utilizada por quem recebe o executável.
+## Ajustes de organização e mensagens (13/11/2026)
 
-## Estrutura
+- PNGs semanais são salvos em `Imagens/Semanal/Agenda Semanal de DD-Mês-AAAA até DD-Mês-AAAA/`, considerando as datas de segunda a sexta da aba `Semanal` (inclusive quando a semana atravessa o ano).
+- PNG diário é salvo em `Imagens/Diaria/Agenda Diária de DD-Mês-AAAA/`.
+- Os nomes dos PNGs permanecem inalterados; imagens anteriores de outros períodos são preservadas.
+- A geração bem-sucedida não abre mais uma caixa de confirmação; o status da interface é atualizado e Excel/Explorador continuam abrindo.
+- Em erros de validação do Excel, a caixa informa que, após OK, o Excel será aberto para conferência/correção. Erros de ícones mantêm o fluxo próprio do gerenciador.
 
-```text
-app/validation.py       # MVP integrado: validação e ordenação
-app/render.py           # Composição visual exata
-app/assets.py           # GitHub, manifesto e downloads temporários
-app/excel_write.py      # Inserção seletiva e preservação de caches das fórmulas
-app/engine.py           # Fluxo, logs, transação aproximada e limpeza
-app/gui.py              # Interface mínima
-main.py                 # Entrada CLI/GUI
-config.json             # Nome do repositório de recursos
-build_windows.bat       # Compilação Windows
-.github/workflows/      # Compilação opcional pelo GitHub Actions
-repo_github/            # Recursos para publicar (não distribuídos com o EXE)
-tests/                  # Testes de regras, integração e equivalência visual
-docs/                   # Especificações e decisões
-```
+**Para atualizar:** extraia este pacote numa pasta de teste, execute `python main.py` para validar e, depois, `build_windows.bat` para incorporar as mudanças ao executável. Faça backup da versão anterior.
 
-## Limitações conhecidas
+## MZ Arena — atualização de 13/11/2026
 
-- **GitHub:** você ainda precisa publicar os recursos em seu próprio repositório público e configurar `config.json`. Não há token nem autenticação.
-- **Windows EXE:** o `.exe` deve ser compilado em Windows ou GitHub Actions Windows; o pacote entregue contém código-fonte e receita de compilação, não um executável Windows já testado.
-- **Fórmulas:** é obrigatório que as colunas normalizadas tenham resultados calculados salvos no Excel. O programa conserva caches existentes, mas não recalcula dados desatualizados.
-- **Planilhas complexas:** o openpyxl preserva imagens e formas suportadas, mas não garante preservação de todos os tipos de objeto Excel (controles ActiveX e outros recursos não suportados). Teste numa cópia antes de usar em planilhas com elementos além dos da amostra.
-- **Âncoras:** `P4`, `AB4`, `AN4`, `AZ4`, `BL4` são posições reservadas às imagens da agenda. Não existe identificação segura de uma imagem alheia exatamente nessas âncoras.
-- **Pasta sem ano:** o nome aprovado da pasta não contém ano; o aplicativo guarda um arquivo oculto `.agenda-year` e bloqueia reutilização quando detecta edição de outro ano.
-- **Substituição de múltiplos arquivos:** os arquivos são preparados antes de publicação e possuem rollback de falhas comuns. Não é possível garantir uma transação entre Excel e todos os PNGs numa falha de energia.
-- **Funcionamento offline:** não é suportado por decisão de produto. Sem internet, a geração não prossegue.
+**IMPORTANTE: antes de executar esta versão, insira manualmente uma coluna I nas duas abas `Semanal` e `Diária` de uma CÓPIA do Excel.** No Excel, selecione a coluna I inteira e use Inserir coluna. Isso desloca todas as colunas antigas de I em diante. Não basta digitar `Sim` na coluna I antiga: ela contém datas. Faça backup e confira as fórmulas depois da inserção. A aplicação **não altera a estrutura da planilha automaticamente**.
+
+- Na nova coluna **I**, para as linhas com Investor Day, escreva `Sim` (sem distinção de maiúsculas/minúsculas) para exibir o selo, ou deixe vazio para não exibir. Outros valores são rejeitados para evitar enganos.
+- Datas: `Semanal!J2,J9,J17,J25,J33`; `Diária!J2` e dia da semana `Diária!J3`.
+- Período normalizado: **K**; horários de conferências: **L/M**; modalidade e horário do Investor Day: **N/O**.
+- Imagens inseridas no Excel: `Semanal!Q4,AC4,AO4,BA4,BM4`; `Diária!Q3`. A substituição também limpa imagens antigas nas âncoras anteriores para evitar duplicações.
+- PNG das agendas mantém dimensões originais; selo **50 × 7 pixels** centralizado sob o horário de cada Investor Day marcado.
+
+### Publicar o recurso no GitHub (uma vez)
+
+O PNG real da MZ Arena **não foi fornecido**, portanto não acompanha o ZIP. É necessário publicar o arquivo PNG oficial de 50 × 7 pixels em `agenda-assets/Icones/MZ/MZArena.png` no repositório de recursos configurado e adicionar a entrada `Icones/MZ/MZArena.png` ao `agenda-assets/manifest.json`, com `sha256` calculado a partir dos bytes exatos do arquivo e `type: image/png`. Por exemplo, calcule o SHA-256 com `python -c "import hashlib; print(hashlib.sha256(open('MZArena.png','rb').read()).hexdigest())"`.
+
+O gerenciador de ícones de **empresas** existente aceita apenas 119 × 50 pixels e não deve ser usado para esse selo especial. Até o selo ser publicado e incluído no manifesto, a geração com `Sim` é bloqueada com uma mensagem de recurso ausente, antes de modificar o Excel. Uma vez publicado, as três modalidades usam o mesmo recurso online automaticamente, sem recompilar.
+
+### Compilação
+
+Teste com `python main.py` antes de recompilar. Para gerar o EXE atualizado no Windows, execute `build_windows.bat` e abra o novo `dist/AgendaMercado.exe`.

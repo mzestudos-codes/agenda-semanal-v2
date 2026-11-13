@@ -53,7 +53,7 @@ def sheet_xml_path(zipfile, sheet_name):
     return target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join('xl', target))
 
 
-def restore_formula_cache(original, candidate):
+def restore_formula_cache(original, candidate, sheets=('Agenda',)):
     """Devolve caches de fórmulas não modificadas, inclusive datas e textos.
 
     Os caches não são recalculados. São reutilizados somente quando a fórmula
@@ -61,45 +61,33 @@ def restore_formula_cache(original, candidate):
     """
     original, candidate = Path(original), Path(candidate)
     with ZipFile(original) as source, ZipFile(candidate) as current:
-        src_entry = sheet_xml_path(source, 'Agenda')
-        dst_entry = sheet_xml_path(current, 'Agenda')
-        src = etree.fromstring(source.read(src_entry))
-        dst = etree.fromstring(current.read(dst_entry))
-        source_cells = {
-            cell.get('r'): cell
-            for cell in src.iter(S + 'c')
-            if cell.find(S + 'f') is not None
-        }
+        replacements = {}
         restored = 0
-        for cell in dst.iter(S + 'c'):
-            old = source_cells.get(cell.get('r'))
-            if old is None:
-                continue
-            old_formula = old.find(S + 'f')
-            new_formula = cell.find(S + 'f')
-            if new_formula is None or (old_formula.text, dict(old_formula.attrib)) != (new_formula.text, dict(new_formula.attrib)):
-                continue
-            old_value = old.find(S + 'v')
-            if old_value is None:
-                continue
-            existing = cell.find(S + 'v')
-            if existing is not None:
-                cell.remove(existing)
-            insert_at = list(cell).index(new_formula) + 1
-            cell.insert(insert_at, deepcopy(old_value))
-            if old.get('t'):
-                cell.set('t', old.get('t'))
-            else:
-                cell.attrib.pop('t', None)
-            restored += 1
-        updated = etree.tostring(dst, xml_declaration=False, encoding='utf-8')
-        # Copiar todas as partes e alterar somente a planilha afetada.
-        with tempfile.NamedTemporaryFile(dir=candidate.parent, suffix='.xlsx', delete=False) as temp:
-            temp_path = Path(temp.name)
+        for sheet_name in sheets:
+            src_entry = sheet_xml_path(source, sheet_name)
+            dst_entry = sheet_xml_path(current, sheet_name)
+            src = etree.fromstring(source.read(src_entry))
+            dst = etree.fromstring(current.read(dst_entry))
+            source_cells = {cell.get('r'):cell for cell in src.iter(S+'c') if cell.find(S+'f') is not None}
+            for cell in dst.iter(S+'c'):
+                old=source_cells.get(cell.get('r'))
+                if old is None:continue
+                old_formula=old.find(S+'f');new_formula=cell.find(S+'f')
+                if new_formula is None or (old_formula.text,dict(old_formula.attrib)) != (new_formula.text,dict(new_formula.attrib)):continue
+                old_value=old.find(S+'v')
+                if old_value is None:continue
+                existing=cell.find(S+'v')
+                if existing is not None:cell.remove(existing)
+                cell.insert(list(cell).index(new_formula)+1,deepcopy(old_value))
+                if old.get('t'):cell.set('t',old.get('t'))
+                else:cell.attrib.pop('t',None)
+                restored+=1
+            replacements[dst_entry]=etree.tostring(dst,xml_declaration=False,encoding='utf-8')
+        with tempfile.NamedTemporaryFile(dir=candidate.parent,suffix='.xlsx',delete=False) as temp:
+            temp_path=Path(temp.name)
         try:
-            with ZipFile(temp_path, 'w') as output:
-                for item in current.infolist():
-                    output.writestr(item, updated if item.filename == dst_entry else current.read(item.filename))
+            with ZipFile(temp_path,'w') as output:
+                for item in current.infolist():output.writestr(item,replacements.get(item.filename,current.read(item.filename)))
         except BaseException:
             temp_path.unlink(missing_ok=True)
             raise
@@ -112,19 +100,25 @@ def restore_formula_cache(original, candidate):
     return restored
 
 
-def make_excel_candidate(excel_path, images, output_path, logger=None):
+def make_excel_candidate(excel_path, images, output_path, logger=None, sheets=None):
     book = load_workbook(excel_path)
     try:
-        if 'Agenda' not in book.sheetnames:
-            raise AgendaError('A aba Agenda não existe.')
-        sheet = book['Agenda']
-        # Âncoras usadas pelo sistema de agendas. Outros desenhos permanecem.
-        sheet._images[:] = [image for image in sheet._images if image_anchor(image) not in ANCHORS]
-        for anchor, path in images.items():
-            sheet.add_image(ExcelImage(str(path)), anchor)
+        if sheets is None:sheets={'Agenda':images}
+        for sheet_name,sheet_images in sheets.items():
+            if sheet_name not in book.sheetnames:raise AgendaError(f'A aba {sheet_name} não existe.')
+            sheet=book[sheet_name]
+            anchors={'Q3','P3'} if sheet_name=='Diária' else ANCHORS | {'P4','AB4','AN4','AZ4','BL4'}
+            sheet._images[:]=[image for image in sheet._images if image_anchor(image) not in anchors]
+            for anchor,path in sheet_images.items():sheet.add_image(ExcelImage(str(path)),anchor)
         book.save(output_path)
     finally:
         book.close()
-    retained = restore_formula_cache(excel_path, output_path)
+    # O openpyxl regrava todas as abas: restaurar caches de TODAS, inclusive as não selecionadas.
+    original_book = load_workbook(excel_path, read_only=True)
+    try:
+        all_sheets = tuple(original_book.sheetnames)
+    finally:
+        original_book.close()
+    retained = restore_formula_cache(excel_path, output_path, sheets=all_sheets)
     if logger:
         logger.info('Caches de %d fórmulas preservados na planilha atualizada', retained)

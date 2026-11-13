@@ -1,22 +1,15 @@
-"""Entrada de execução para interface e automação de testes."""
-import argparse
-import json
-from app.gui import config_path
-from app.engine import run
-from app.gui import main as gui_main
+import argparse,json
+from app.gui import config_path,main as gui_main
+from app.mercado import run
 
 def main():
-    parser=argparse.ArgumentParser(description='Geração da Agenda Semanal')
-    parser.add_argument('--excel',help='Planilha .xlsx de entrada')
-    parser.add_argument('--repository',help='GitHub público owner/repository')
-    parser.add_argument('--branch',default=None)
-    parser.add_argument('--assets-dir',help='SOMENTE TESTE: diretório de assets com manifest.json')
-    parser.add_argument('--no-open',action='store_true')
-    args=parser.parse_args()
-    if args.excel:
-        config = json.loads(config_path().read_text(encoding='utf-8')) if config_path().is_file() else {}
-        folder=run(args.excel,repository=args.repository or config.get('github_repository'),branch=args.branch or config.get('github_branch','master'),assets_subdir=config.get('github_assets_subdir',''),local_assets=args.assets_dir,open_results=not args.no_open)
-        print(folder)
-    else:gui_main()
+    p=argparse.ArgumentParser(description='AgendaMercado')
+    p.add_argument('--excel');p.add_argument('--mode',choices=['semanal','diaria','ambas'],default='semanal')
+    p.add_argument('--repository');p.add_argument('--branch');p.add_argument('--assets-dir');p.add_argument('--no-open',action='store_true')
+    a=p.parse_args()
+    if not a.excel:return gui_main()
+    cfg=json.loads(config_path().read_text(encoding='utf-8')) if config_path().exists() else {}
+    paths=run(a.excel,mode=a.mode,repository=a.repository or cfg.get('github_repository'),branch=a.branch or cfg.get('github_branch','master'),local_assets=a.assets_dir,assets_subdir=cfg.get('github_assets_subdir',''),open_results=not a.no_open)
+    for path in paths:print(path)
 
 if __name__=='__main__':main()

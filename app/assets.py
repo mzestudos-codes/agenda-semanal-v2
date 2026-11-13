@@ -10,7 +10,7 @@ PREFIX='https://raw.githubusercontent.com'
 API='https://api.github.com'
 
 def fetch(url,limit=12_000_000):
-    req=Request(url,headers={'User-Agent':'AgendaSemanal/1.0','Accept':'application/vnd.github+json'})
+    req=Request(url,headers={'User-Agent':'AgendaMercado/1.0','Accept':'application/vnd.github+json'})
     try:
         with urlopen(req,timeout=15) as response:
             data=response.read(limit+1)
@@ -46,6 +46,8 @@ def desired_paths(data,logger):
             required.add('Icones/MZ/'+category_icon)
             for event in groups[cat]:
                 required.add('Icones/'+event['empresa']+'.png')
+                if cat=='investor_day' and event.get('mz_arena'):
+                    required.add('Icones/MZ/MZArena.png')
     logger.info('Recursos requeridos: %d',len(required))
     return required
 
@@ -80,7 +82,7 @@ def obtain_assets(data,temporary_dir,logger,repository=None,branch='main',local_
         labels = []
         for name in missing:
             days = locations.get(name.casefold(), set())
-            labels.append(f"{name} ({', '.join(sorted(days))})" if days else name)
+            labels.append(f"{name.removeprefix('Icones/').removesuffix('.png')} ({', '.join(sorted(days))})" if days else name.removeprefix('Icones/').removesuffix('.png'))
         raise AgendaError('Recursos visuais ausentes no GitHub:\n' + '\n'.join(' - ' + name for name in labels))
     resolved={requested:idx[requested.casefold()][0] for requested in sorted(required)}
     for requested,real in resolved.items():
