@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.spec
+*.log
+.pytest_cache/
+# A planilha real e as imagens históricas são de referência local e não devem
+# ser publicadas num repositório de código sem revisão explícita.
+tests/fixtures/NomesSemanal.xlsx
+tests/fixtures/visual/

@@ -1,0 +1,1742 @@
+{
+  "schema_version": 1,
+  "assets_version": "1.0.0",
+  "assets": {
+    "Fonte/Lato-Black.ttf": {
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-BlackItalic.ttf": {
+      "sha256": "3214f75bf96783a571bd25338c867c669e7c5e7c08a227f18a7b63766d6e6cbe",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Bold.ttf": {
+      "sha256": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-BoldItalic.ttf": {
+      "sha256": "62c1b7f0d2e74b45960154c3520efc337b553db0961bfdc950d5618334596cc8",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-ExtraBold.ttf": {
+      "sha256": "61018de62bdaf90d4ac80b1d53c5c130756c8e9219aea3d2773fc9bd5869af97",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-ExtraBoldItalic.ttf": {
+      "sha256": "a42b384b9c37913a61023e3a47c07fead26e776127bbc9e6a0c96fe413089374",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-ExtraLight.ttf": {
+      "sha256": "989989b481db5df0827d90c51fd08d024fe7bc4e367046e2584a0d3b0487936d",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-ExtraLightItalic.ttf": {
+      "sha256": "fc56526250b9b64ce0908c52350b03e91b84afecb08fd2834a12e57b91abdb31",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Italic.ttf": {
+      "sha256": "e399c44efe1387100531d26c7e4800c5d12251b890d6654a3098c7c679cb1786",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Light.ttf": {
+      "sha256": "cf2a774503baf418d584f49967bd160e1e03f087c13b25602f28024ec7788f08",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-LightItalic.ttf": {
+      "sha256": "700e6722fd14a10e7646347a6b14c486d4c364a373ba61c70e0b5ccee7811635",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Medium.ttf": {
+      "sha256": "d3ac182a6833e005745dd75679fbad081c0b12535df4e93ad8ed57817a31a338",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-MediumItalic.ttf": {
+      "sha256": "ecbce6cffa42d8a67afeb27a9d6e85d515e81481d4b2cece989e833a48048405",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Regular.ttf": {
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-SemiBold.ttf": {
+      "sha256": "71b8b7decbe75a881ed267be539d402bd1e9420b799658aada4e0d1bd5af803c",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-SemiBoldItalic.ttf": {
+      "sha256": "5adeb6b334d8fb99ef053bc052b952773d544315e0e1d668a12c0ce8bd51375c",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-Thin.ttf": {
+      "sha256": "663c55bfe9a38270fff44da273bf4d792eafc3e7e1201f62c3064cad80c5d5e7",
+      "type": "font/ttf"
+    },
+    "Fonte/Lato-ThinItalic.ttf": {
+      "sha256": "e5e86e219ce6987b175470d94d57753a387d1860b635da6327a60e8d19a33beb",
+      "type": "font/ttf"
+    },
+    "Fundo/Base0Divul0Conf1Inv.png": {
+      "sha256": "49241b6479ebad0360d17d8fe71fd9092d49e8a16c78d8bcbad5d167b2b832e9",
+      "type": "image/png"
+    },
+    "Fundo/Base0Divul1Conf0Inv.png": {
+      "sha256": "49241b6479ebad0360d17d8fe71fd9092d49e8a16c78d8bcbad5d167b2b832e9",
+      "type": "image/png"
+    },
+    "Fundo/Base0Divul1Conf1Inv.png": {
+      "sha256": "70c4daefe1db297cfc19143b8a613a44e87cd68450affbaa204716bfcad10c76",
+      "type": "image/png"
+    },
+    "Fundo/Base1Divul0Conf0Inv.png": {
+      "sha256": "49241b6479ebad0360d17d8fe71fd9092d49e8a16c78d8bcbad5d167b2b832e9",
+      "type": "image/png"
+    },
+    "Fundo/Base1Divul0Conf1Inv.png": {
+      "sha256": "70c4daefe1db297cfc19143b8a613a44e87cd68450affbaa204716bfcad10c76",
+      "type": "image/png"
+    },
+    "Fundo/Base1Divul1Conf0Inv.png": {
+      "sha256": "70c4daefe1db297cfc19143b8a613a44e87cd68450affbaa204716bfcad10c76",
+      "type": "image/png"
+    },
+    "Fundo/Base1Divul1Conf1Inv.png": {
+      "sha256": "2e81cc9319710c4545043d6a1ce5aba175f1c2ae3a9ea9bc1ece0f451a6ac6e5",
+      "type": "image/png"
+    },
+    "Icones/3tentos.png": {
+      "sha256": "8a9cdae65e970b63eb156ee69e45859530b959e2d7cb75943d1cacfff95d039b",
+      "type": "image/png"
+    },
+    "Icones/A&T Energia.png": {
+      "sha256": "f49258a871836b3e93bb3746dc03cf14b8b7d95ffeafe34715bf4bf00e8c04f8",
+      "type": "image/png"
+    },
+    "Icones/AESBrasil.png": {
+      "sha256": "11baa89e0bcbb0666af2186c3f17505bc1675fd4744de0f7cab24846df1c2b8b",
+      "type": "image/png"
+    },
+    "Icones/AXIA.png": {
+      "sha256": "06f1844d3889f462593e207a9f036b9c1d547666cb71af8f2aec61ffe1222909",
+      "type": "image/png"
+    },
+    "Icones/AZUL.png": {
+      "sha256": "d1c99bb3d849b88fdd6b4c3576af772fc40794c88a8e94b9876136b8d14ad847",
+      "type": "image/png"
+    },
+    "Icones/Aco Altona.png": {
+      "sha256": "912dd8972bd68d0093cb237a804bf3e093409a43c4b23b86440763a909b947b9",
+      "type": "image/png"
+    },
+    "Icones/Aegea.png": {
+      "sha256": "6ce6df53489bf166763084590aa59461d707a478ac11978c20a5410d1b5062f4",
+      "type": "image/png"
+    },
+    "Icones/Aeris.png": {
+      "sha256": "593a53438f013537352259b9cfbfc33e119b3da61b043205fdf3f5f5001413ac",
+      "type": "image/png"
+    },
+    "Icones/Afya.png": {
+      "sha256": "32255873be7d4032b0ba1b65c54373d3d17f718b1102f69d7ea52fa36a27d404",
+      "type": "image/png"
+    },
+    "Icones/AgriBrasil.png": {
+      "sha256": "b6222f7da5745f285557ad84e2189a6600cb6a59c2738dee2c6d068f15346317",
+      "type": "image/png"
+    },
+    "Icones/Agrogalaxy.png": {
+      "sha256": "45e9476c0340ea7cac0aeeedd3cb9e82ed83263758808b080cd3c5ac349ba18a",
+      "type": "image/png"
+    },
+    "Icones/Algar Telecom.png": {
+      "sha256": "3a6fb6fa3e799a026b23e348680dca233cae71e49a63c918c1fa8cf92d366d7c",
+      "type": "image/png"
+    },
+    "Icones/Alliança.png": {
+      "sha256": "a5e8569ea86e605c704a1c36a51a8ecdf9ea8bc6cb0557d983dee599ebcc4026",
+      "type": "image/png"
+    },
+    "Icones/Allied.png": {
+      "sha256": "86b1d19b9473011aaa6f0823ad330c66479ebf83e974b87ea2d68c9bfc8a66ab",
+      "type": "image/png"
+    },
+    "Icones/Allos.png": {
+      "sha256": "62cac7e1c3fae1f38d7a1193b04fd0623e85a08c42a994e9e0d283d58bcf93a2",
+      "type": "image/png"
+    },
+    "Icones/Alpargatas.png": {
+      "sha256": "c31df6badf4e47408b0032e14d5116b81e70d62f81694903b12cdb9d546675fc",
+      "type": "image/png"
+    },
+    "Icones/Alper.png": {
+      "sha256": "d379962f8792b777370f2fe2f506f35f8f4425c16fd31e16de04d75e3cac828d",
+      "type": "image/png"
+    },
+    "Icones/Alphaville.png": {
+      "sha256": "bc24821c2248ab97dee8693af92448438b0fe910fe241cc70af5da721b6afb9b",
+      "type": "image/png"
+    },
+    "Icones/Alupar.png": {
+      "sha256": "ffe4d129f430d48b773908371c885658b52bb52457218937d348f4f4c245e6fc",
+      "type": "image/png"
+    },
+    "Icones/Ambev.png": {
+      "sha256": "e42347ea577d7f422d8a97b836d8cdc3a65ccb7dcad316b40eb10fca299cefce",
+      "type": "image/png"
+    },
+    "Icones/Ambipar.png": {
+      "sha256": "ad793eb72b0954147b6f0d68dd18a4f82859b26e498abd597ad75c20316ab3f4",
+      "type": "image/png"
+    },
+    "Icones/Americanas.png": {
+      "sha256": "bbe567b8cefd352120ffb82f14019170b7bcc273c1921ac41d0665748745386e",
+      "type": "image/png"
+    },
+    "Icones/Arco Educação.png": {
+      "sha256": "89b3573cb5196e9078771b183d9ea8fd34389337fe345842a12c2269bc91e593",
+      "type": "image/png"
+    },
+    "Icones/Arezzo.png": {
+      "sha256": "3499f060c5d14db305bd4ff76e1a58573cb924a775228c843dbf55f5a4d13fe0",
+      "type": "image/png"
+    },
+    "Icones/Armac.png": {
+      "sha256": "e6502c902f1cb4bdd00fa954a90355f4da3c8ac14ae161a661b32c77cd61cdb1",
+      "type": "image/png"
+    },
+    "Icones/Assaí.png": {
+      "sha256": "ae0d01da3d8b975486b70e2b7bd6e64cccafc8e1ae0aae9769e461607deb4434",
+      "type": "image/png"
+    },
+    "Icones/Atma.png": {
+      "sha256": "419b56aef72beaf37b6e0edf645fe773615dcdce44ae4e3213a59843f7e5e55c",
+      "type": "image/png"
+    },
+    "Icones/Aura Minerals.png": {
+      "sha256": "dab894185d27f4978e1b35edc9a869ec5f29322e8d0e095dc1223ebebe1aa0b4",
+      "type": "image/png"
+    },
+    "Icones/Auren.png": {
+      "sha256": "be73394f1b7a48238062cd5d75ad771f009d9464ff4fe7e80929e43305745828",
+      "type": "image/png"
+    },
+    "Icones/Automob.png": {
+      "sha256": "629495d74f4dc535ea3f60e5485e6edd18e105c6aeb62c595f05006a779bd0f5",
+      "type": "image/png"
+    },
+    "Icones/Azevedo & Travassos.png": {
+      "sha256": "7f1c45578f8e0688705189329f72b68ca08d6c65803212b3ea2d222cd1dd318c",
+      "type": "image/png"
+    },
+    "Icones/Azevedo &Travassos Energia.png": {
+      "sha256": "f49258a871836b3e93bb3746dc03cf14b8b7d95ffeafe34715bf4bf00e8c04f8",
+      "type": "image/png"
+    },
+    "Icones/Azzas 2154.png": {
+      "sha256": "665e054057d3e7fe76c41ef357206d6dfc29a4786dc5031f8c081de105b8d316",
+      "type": "image/png"
+    },
+    "Icones/B3.png": {
+      "sha256": "a4127de34e1044a490e4f0983c07373785622e38e33beb8b7e91ece085e76355",
+      "type": "image/png"
+    },
+    "Icones/BB Seguridade.png": {
+      "sha256": "3562c6d778a1354418e1691a089b9560798f493c1761c9c11bd6af7cf458658f",
+      "type": "image/png"
+    },
+    "Icones/BBM Logistica.png": {
+      "sha256": "27c449104e13cfff65c265fd41b34f5e42b006bcdd7a18b1e89e518b47c466e0",
+      "type": "image/png"
+    },
+    "Icones/BCO NORDESTE DO BRASIL S.A..png": {
+      "sha256": "b280fb15e0ca3db20799416cddd7b30eeecdc051d5bd8b9d0fb53b8feb3017a1",
+      "type": "image/png"
+    },
+    "Icones/BR Partners.png": {
+      "sha256": "f2f8200f70d53d40c690173d2b7bcb4b50293a7db23e14b8bf573efd43f52af5",
+      "type": "image/png"
+    },
+    "Icones/BR Properties.png": {
+      "sha256": "242248e5b877c2ae12e11e080ecadc5ee5c60721aacb02a4375e5102fb4fb71b",
+      "type": "image/png"
+    },
+    "Icones/BRB.png": {
+      "sha256": "3b2df32c562f21955319e22e40f1998af1e1911321da0de068a182d22644a8f0",
+      "type": "image/png"
+    },
+    "Icones/BRF.png": {
+      "sha256": "bb5e00fb9b261acec2626b4b37fa83db5ed58fc9c40f4a9599a7e29fadbf1d50",
+      "type": "image/png"
+    },
+    "Icones/BRK Ambiental.png": {
+      "sha256": "b98ac9fb3d24de09664c60ba05c1ecc3ff307743ab6bdcb8958171a5d0d2d166",
+      "type": "image/png"
+    },
+    "Icones/BRQ.png": {
+      "sha256": "67a8eb25a7537fef0e0fa93e03ec81d0724a02e5e957228a5d4ff66aacf1f3b2",
+      "type": "image/png"
+    },
+    "Icones/BTG Pactual.png": {
+      "sha256": "d3568b0f77c8d4cda5da4d08322f160d8d2fc6ae615f61104bb32638f34946c3",
+      "type": "image/png"
+    },
+    "Icones/Bahema.png": {
+      "sha256": "ccd680db4c0401e9a9a275076af3417d6aaf6965d9edac4aa54276d1d1f9bfd6",
+      "type": "image/png"
+    },
+    "Icones/Banco BMG.png": {
+      "sha256": "e229055b8f7b4528be98267cf125be24df019f0e995d9c32701cab7097131689",
+      "type": "image/png"
+    },
+    "Icones/Banco BRB.png": {
+      "sha256": "3b2df32c562f21955319e22e40f1998af1e1911321da0de068a182d22644a8f0",
+      "type": "image/png"
+    },
+    "Icones/Banco BV.png": {
+      "sha256": "4faae22dd588c96a480f9cb206231fa2fcb3429780ef9e35e9bc2b6489ac1e1e",
+      "type": "image/png"
+    },
+    "Icones/Banco Mercantil.png": {
+      "sha256": "d88207926c93654a396213effc59426ab1d97f7bcf63eb490479ee561bcfb955",
+      "type": "image/png"
+    },
+    "Icones/Banco Modal.png": {
+      "sha256": "82213ea10535fd6a492da452a5945e3d84def52c7aeac5b2728043fd4c83aea4",
+      "type": "image/png"
+    },
+    "Icones/Banco Pan.png": {
+      "sha256": "f91012700df40516a1d6c14d977fca832eac9f25d787af63cb94c07ef14acfa9",
+      "type": "image/png"
+    },
+    "Icones/Banco da Amazônia.png": {
+      "sha256": "8977cf82c33744caeff54a90090208dfa1bfd370a993d8c08698e306afca5ee0",
+      "type": "image/png"
+    },
+    "Icones/Banco do Brasil.png": {
+      "sha256": "dc38198fe5419372863b03c5ef091126fb14e7623d948ded9bd25127df5d9b89",
+      "type": "image/png"
+    },
+    "Icones/Banese.png": {
+      "sha256": "89aae66858688aa74e1bdddc4064aeef0d882b6e47195384f073fb40ec094bd1",
+      "type": "image/png"
+    },
+    "Icones/Banestes.png": {
+      "sha256": "52cc5a7978df4a1d622f6fd4103f00b12537a8825b23af0ff88117968c976fc1",
+      "type": "image/png"
+    },
+    "Icones/Banpara.png": {
+      "sha256": "c9ea35e00f98c6c5d21fcb3aee2ae1649713368494de32d099d041ace28d62c4",
+      "type": "image/png"
+    },
+    "Icones/Banrisul.png": {
+      "sha256": "0228a53050eaec6bd1ea6c583092d7bdb52554e5911adb7143e15cfa7f691ad7",
+      "type": "image/png"
+    },
+    "Icones/Bemobi Tech.png": {
+      "sha256": "1e9c8f785079383b597e5b659a5bf8bc8a162645f15944bbddd84f4adbd4bd5d",
+      "type": "image/png"
+    },
+    "Icones/Bioma Educação.png": {
+      "sha256": "ce0f9758109dc4d95374a22a62ecdbba5357e66b2b9f34f646a975bebc05e907",
+      "type": "image/png"
+    },
+    "Icones/Biomm.png": {
+      "sha256": "23a5f737f2368212c16788f6f6528b7f309966fe1fe9468bc85ef7bfdf535248",
+      "type": "image/png"
+    },
+    "Icones/Blau.png": {
+      "sha256": "5db7f4ac647d5eddf61473750b11f823c89193ef8993fa8640b0be0079b0aa81",
+      "type": "image/png"
+    },
+    "Icones/Boa Safra.png": {
+      "sha256": "41c569d34e16388363e19542d3d6530c294506cddd4f2f40e9c22305a68c1211",
+      "type": "image/png"
+    },
+    "Icones/Boa Vista.png": {
+      "sha256": "36de99c3dda1684b5dd99b1f37b51c113e74180f0a04245c32897c46975b239e",
+      "type": "image/png"
+    },
+    "Icones/Bombril.png": {
+      "sha256": "3cfc35ee7cfbb2bc04e9c934fd57a404f9a472a5d035455815528335332f4d57",
+      "type": "image/png"
+    },
+    "Icones/Bradesco.png": {
+      "sha256": "ce51758990594151c505fe41bd7f1830b66eba9c367b43d3eae6fc40f8df5b40",
+      "type": "image/png"
+    },
+    "Icones/Bradespar.png": {
+      "sha256": "a44786f348a3660ae2d7d5d31984ea4d08f7607f27c76436ac736b9b161d6c2c",
+      "type": "image/png"
+    },
+    "Icones/BrasilAgro.png": {
+      "sha256": "7aba371ddf9ff537c9037e0d72c6eaa9b6d187ec18034be4b36fdefd0b17ef19",
+      "type": "image/png"
+    },
+    "Icones/Braskem.png": {
+      "sha256": "be8b377e78667b3159cedd9d5c3eac83349e1935569813b6dfcdf47c25a67da9",
+      "type": "image/png"
+    },
+    "Icones/Brava Energia.png": {
+      "sha256": "118b146addf3160f782dca0a1788adb7361d3557b2c143e69cd5f6b26cba6763",
+      "type": "image/png"
+    },
+    "Icones/Brisanet.png": {
+      "sha256": "a70274d6a044b239011f2598711eaf23c9a32933f3f90b916dff922f754cfb74",
+      "type": "image/png"
+    },
+    "Icones/CBA.png": {
+      "sha256": "fe0742007a575888211b9352178448c2c934828dfe5fc7723917384c53425720",
+      "type": "image/png"
+    },
+    "Icones/CCR.png": {
+      "sha256": "b3fd1dc2ff6314acec2bfdd2fde86faa618cfb1e3df41f56db6b592527344f53",
+      "type": "image/png"
+    },
+    "Icones/CEA Modas.png": {
+      "sha256": "74e0449d3e47f05caaf18e04c97e5c91a1e825ea57329110927a6ea30387e310",
+      "type": "image/png"
+    },
+    "Icones/CEB.png": {
+      "sha256": "ac185d92c792e72d9cb92b6ff0768430b813b766ed0458857f4d6f25eb530fea",
+      "type": "image/png"
+    },
+    "Icones/CI&T.png": {
+      "sha256": "11ae43066586f6a5fa0ee291782ba5ea19b9ebb67d390a5a2496ca927857d00c",
+      "type": "image/png"
+    },
+    "Icones/CIA CATARINENSE DE AGUAS E SANEAM.-CASAN.png": {
+      "sha256": "955e57b26df05b254fe9dbd70d0a894859a39e167582fbf89f5ceaba8a126859",
+      "type": "image/png"
+    },
+    "Icones/COPASA.png": {
+      "sha256": "60a3756b042997f63c5f3ca78ce2a392bbbcbf19ab73c2eac2507a5b128e5e5e",
+      "type": "image/png"
+    },
+    "Icones/CPFL Energia.png": {
+      "sha256": "6356ef4daff6e5fc62421b5ef83287f8f74d07fa3287a4c66486d0474fb3a465",
+      "type": "image/png"
+    },
+    "Icones/CR2.png": {
+      "sha256": "3b12568e78a35de1f65bf2ab0675294e154f55003f8a4eeef1e19155a4b94d5e",
+      "type": "image/png"
+    },
+    "Icones/CSN Mineração.png": {
+      "sha256": "fa6d26c77a32d2de6147b9051f731d07754397f633e4f2aef37eaf1dbe3a3318",
+      "type": "image/png"
+    },
+    "Icones/CSN.png": {
+      "sha256": "af0057febf38b2c4c8057b9ebf788296437df19a3a48a3aa8ff7cfbea6a5a3f2",
+      "type": "image/png"
+    },
+    "Icones/CSU Digital.png": {
+      "sha256": "5f29b0c7578cbc28a501b6b6ad2797bd140a4ae9c77fa4a79d2ab503d5a84794",
+      "type": "image/png"
+    },
+    "Icones/CTC.png": {
+      "sha256": "bb14dbe428ce59a058f6200337d40b078a48ee620930fd4ceb5c251ad74db239",
+      "type": "image/png"
+    },
+    "Icones/CTG.png": {
+      "sha256": "2a2db21237f0058241eb07b18290fe671adbc3237e61d1f2443cf50eff1efd7c",
+      "type": "image/png"
+    },
+    "Icones/CVC.png": {
+      "sha256": "ff77889371433a7a466e3522953ed767893eede318e1847276ae4a7829e44498",
+      "type": "image/png"
+    },
+    "Icones/Caixa Econômica Federal.png": {
+      "sha256": "b808c677fa109167a34b7f560767cd7edfdfe077823914c9131a29c16217e282",
+      "type": "image/png"
+    },
+    "Icones/Caixa Seguridade.png": {
+      "sha256": "474ecd3ad97ab9fd6af91261d5810348eb9ae6f348d203d0e8237e09c5e598fe",
+      "type": "image/png"
+    },
+    "Icones/Cambuci.png": {
+      "sha256": "5864c6ca01c963f1f0e4dfdf8aa4c908834674e17bdabda1ac3976a3051282bb",
+      "type": "image/png"
+    },
+    "Icones/Camil.png": {
+      "sha256": "f90d10b6dde48eedf92c4726699f36b65d6c94c3a11fe7d804340fe4c00a591f",
+      "type": "image/png"
+    },
+    "Icones/Cantustore.png": {
+      "sha256": "3bf20e96d7ebf4c7a2f5d4f292d2b45ca3a3b32b8cd58ec705103affdaddfc13",
+      "type": "image/png"
+    },
+    "Icones/Carrefour.png": {
+      "sha256": "c88653c9e73c7adb071ba67557a383adf708c46a629a2cb7780c49822d923a87",
+      "type": "image/png"
+    },
+    "Icones/Casan.png": {
+      "sha256": "955e57b26df05b254fe9dbd70d0a894859a39e167582fbf89f5ceaba8a126859",
+      "type": "image/png"
+    },
+    "Icones/Cedro.png": {
+      "sha256": "a1476a24b0eb865b4bce6dd72f1d9d449835720715b9f83901c5f84494b006e7",
+      "type": "image/png"
+    },
+    "Icones/Celesc.png": {
+      "sha256": "9adf40968a6714b3fea93cbed7194527a0d7c83c6c40623c7701eeca641a6564",
+      "type": "image/png"
+    },
+    "Icones/Cemepe.png": {
+      "sha256": "1f11cfba20d2ca039c123734e2179594e716931352c437d7d82d30146c172ec0",
+      "type": "image/png"
+    },
+    "Icones/Cemig.png": {
+      "sha256": "b05c61dbab9d6d5b513ae1aa591766a666aeb2e4a141d18fbf764f4ee3f244d4",
+      "type": "image/png"
+    },
+    "Icones/Cielo.png": {
+      "sha256": "ef1608d24c9ab47b314672246b00b84d4e4b62e9d772b814736c33f7b60ea6ee",
+      "type": "image/png"
+    },
+    "Icones/Cinesystem.png": {
+      "sha256": "0b75323bd6d840b3be280ec6c3f5f2276f856a28e36f75ee3886ea61da9bea4e",
+      "type": "image/png"
+    },
+    "Icones/ClearSale.png": {
+      "sha256": "710eebd6e763dae70f05c7bd98f16c1c19cced96c55c15aeb00e18d0975f7c1c",
+      "type": "image/png"
+    },
+    "Icones/Coelce.png": {
+      "sha256": "93f15b33cf3aaa4b8ece33c8a8e7137f0aae7e5d60ac18143f4d16ac17a78172",
+      "type": "image/png"
+    },
+    "Icones/Cogna.png": {
+      "sha256": "148dcef27a3e6fb912f39cc253deed1c14a4cd2371fd24a96fe1bb6acb7b6863",
+      "type": "image/png"
+    },
+    "Icones/Comerc.png": {
+      "sha256": "b800d83af6982950b88366882a92c64e482284dc7b7c47abebced5ac120f1168",
+      "type": "image/png"
+    },
+    "Icones/Comgás.png": {
+      "sha256": "9ba6ec22305a855fcae9138c6cf0c3a6ed1b6682b3abd7e2ef0053f20941cd60",
+      "type": "image/png"
+    },
+    "Icones/Compass.png": {
+      "sha256": "862b86f662903f99bfd4784cc8299713d52af9505c712d099234566b3a0160bc",
+      "type": "image/png"
+    },
+    "Icones/Contax.png": {
+      "sha256": "94b44264cc36ed75455370b608f34c7b8eb059c6820312c4eae319adc9fe407e",
+      "type": "image/png"
+    },
+    "Icones/Copel.png": {
+      "sha256": "1c796598e97af94abad854d66d9ec9e2f78fa6eb952a265c50a54bec82f3a352",
+      "type": "image/png"
+    },
+    "Icones/Cosan.png": {
+      "sha256": "df0afe812dcfd55e3a38bfc6391352dd30187dac08ee38197739925f74d265a8",
+      "type": "image/png"
+    },
+    "Icones/Coteminas.png": {
+      "sha256": "a898f41be86192ee77973ed0aa634dbde77e95b9b160c99466c1f2716d66a1c7",
+      "type": "image/png"
+    },
+    "Icones/Cruzeiro do Sul.png": {
+      "sha256": "2c1d205c38df3c5a7b1ee8129fbb3925ca88e225f45d49254673d5395fb93117",
+      "type": "image/png"
+    },
+    "Icones/Cury.png": {
+      "sha256": "c1e58102f2941bdc8450a55c6b50877abfcd15a3b87e8cf2660a4c712ba01528",
+      "type": "image/png"
+    },
+    "Icones/Cyrela.png": {
+      "sha256": "b7cf4f5137505ee80a5fc8c9c64a993789b24a2b05de492f12c9c885268200da",
+      "type": "image/png"
+    },
+    "Icones/Dasa.png": {
+      "sha256": "4e8c6979a46b57d00374a713c6a2cf863b6aa7cfbd3d47ef2274077629429291",
+      "type": "image/png"
+    },
+    "Icones/Desktop.png": {
+      "sha256": "5087737c86b10e2254a2fb5ddd9d841b0f74f6a5a1a92b39638a3cfbb40418e3",
+      "type": "image/png"
+    },
+    "Icones/Dexco.png": {
+      "sha256": "a66796eda81593218b44ad5bc9a1dd3d607c9ccc56d57c9b3b51ae9c1861fad7",
+      "type": "image/png"
+    },
+    "Icones/Dexxos.png": {
+      "sha256": "fd592a07c49993c2457a64f43e018d8a4c9905c3c4ad623b6e52255428e7f238",
+      "type": "image/png"
+    },
+    "Icones/Direcional.png": {
+      "sha256": "40e0698495047283acf8bdbfca19d78b20e32273ab4f7ef35c8c5c390cf31d8a",
+      "type": "image/png"
+    },
+    "Icones/Dotz.png": {
+      "sha256": "72ea8a67fa8415c641651174ea942ed76d96f9c00519ed47a50f73da6fd91c41",
+      "type": "image/png"
+    },
+    "Icones/EDP.png": {
+      "sha256": "acbf83914cf57e33e079985e026f10c6f45d0bf8e5dbda72544e3ba46b9985bd",
+      "type": "image/png"
+    },
+    "Icones/Ecorodovias.png": {
+      "sha256": "13826d0de67f8977798a86317502391562718120ffa1ed53f9cb20f3f5d0418c",
+      "type": "image/png"
+    },
+    "Icones/Eletrobras.png": {
+      "sha256": "f118de38078746cc31f760b20320e55cd2dc47ba64e9d3d3e58cbbce61f1f6a7",
+      "type": "image/png"
+    },
+    "Icones/Eletromidia.png": {
+      "sha256": "07dfba93a6c983b88ac29aca85d11f3c76e3416aac6b6eafc3b7db05b9dadc00",
+      "type": "image/png"
+    },
+    "Icones/Emae.png": {
+      "sha256": "4605c492a9d0f485f2c9e3799a43fdcb17c28999afabd96b416dc8945a9fb67e",
+      "type": "image/png"
+    },
+    "Icones/Embraer.png": {
+      "sha256": "08bcbd4d2f5cdacd40e634bf982c3472f2452b31ad5fdabe6dc9549950c95ac9",
+      "type": "image/png"
+    },
+    "Icones/Emccamp.png": {
+      "sha256": "644c26144fe6f7ed5ebaf34a4396e65b2a8c2dbc0c12e7080af0cf4917055f33",
+      "type": "image/png"
+    },
+    "Icones/Enauta.png": {
+      "sha256": "a1f50b2deed38b0574b1de203d2cf1081adaf18a9435ab59c9702f122a4fe4a0",
+      "type": "image/png"
+    },
+    "Icones/Energisa.png": {
+      "sha256": "ae86f80254d24b4a970828a3fb8a6a79ec40e2557ef7b7ecc6733090caac2d59",
+      "type": "image/png"
+    },
+    "Icones/Eneva.png": {
+      "sha256": "53f78b3fb55ab51ccdcf9e84eba1eb0e726ec70f603bd7dd2459dad7adba481f",
+      "type": "image/png"
+    },
+    "Icones/Engie Brasil.png": {
+      "sha256": "5974539000877077259c2dbb4e926f2d2a68deec0e9aa88782bf5f4bba42ccb0",
+      "type": "image/png"
+    },
+    "Icones/Enjoei.png": {
+      "sha256": "4d5c1e0ff1dbeec59cfd295aafcc4beb3e71a62ff8e599daea9eb3ab87513f60",
+      "type": "image/png"
+    },
+    "Icones/Equatorial.png": {
+      "sha256": "9c7e8876bb2cdd1116cda8c2df4bf29cc69c009280663ad1830147e57423604c",
+      "type": "image/png"
+    },
+    "Icones/Espaçolaser.png": {
+      "sha256": "7e5c8c17c80432d70201f8ccb8d991ae90fc4e36ab7f84b5acb3a97278770eef",
+      "type": "image/png"
+    },
+    "Icones/Estapar.png": {
+      "sha256": "715ecef311fe1f008d77837bf00c05aa8b3748cbe77ab6f69a8304b8ef18f854",
+      "type": "image/png"
+    },
+    "Icones/Eternit.png": {
+      "sha256": "94b9d948e91adde5e6e3e9c07dbebd60565c15f563abe1dd790e3a9003814f1f",
+      "type": "image/png"
+    },
+    "Icones/Eucatex.png": {
+      "sha256": "6ae2d5bc5b2974c9d6b6c8fa3ee25f085717aa53b45727fad094e726297a29a4",
+      "type": "image/png"
+    },
+    "Icones/Eurofarma.png": {
+      "sha256": "3538f23e257e9515f945ad60a75327d59cdb755df7b24b62b589a1edbe37b89a",
+      "type": "image/png"
+    },
+    "Icones/Even.png": {
+      "sha256": "1e2ddff2870a9b6966ec53fbd05e4ba59db013977a574a393df131f546d45b08",
+      "type": "image/png"
+    },
+    "Icones/Eztec.png": {
+      "sha256": "f84fb0b706196e62081bbd24437d11bf5deb8368b201f09efacb8a3a12a075d7",
+      "type": "image/png"
+    },
+    "Icones/FICA EMPREENDIMENTOS IMOBILIÁRIOS.png": {
+      "sha256": "add359880cfae5f7093202ac282ab6d252ab868dd37e81a0ca745d6ddcdf6bd7",
+      "type": "image/png"
+    },
+    "Icones/Ferbasa.png": {
+      "sha256": "c8586f281fd2147e9e4af52070ca94649148fe828045a75b970152fc4d08e4a7",
+      "type": "image/png"
+    },
+    "Icones/Fictor.png": {
+      "sha256": "fad821c358ebd9030ff473826a55befdf61bcbb666ebf6df003d9b3df27308bb",
+      "type": "image/png"
+    },
+    "Icones/Fleury.png": {
+      "sha256": "386b39fea8c4e701263c1abb78757ccca1064f7b8edae5004a592af381aa23da",
+      "type": "image/png"
+    },
+    "Icones/Flex.png": {
+      "sha256": "6bb728652ee8b673fbe0ef2d4cb4a50a67970c6558a2f4292629bac897a8a4c4",
+      "type": "image/png"
+    },
+    "Icones/Forsea.png": {
+      "sha256": "39e67b89bed48c4b6d5416c11b4590fd2c58bbbc54085589e1636102ce5e8dd2",
+      "type": "image/png"
+    },
+    "Icones/Fras-le.png": {
+      "sha256": "78ab069f90f4c743b85e1c4246d311ed8c3bc502c8bade6c842eaac932215a1f",
+      "type": "image/png"
+    },
+    "Icones/G2D Investments.png": {
+      "sha256": "c1fb72a645916fe01590be77c6511653b145f50563ec5464bfcbd52c0aa9c0ee",
+      "type": "image/png"
+    },
+    "Icones/GD2 Investments.png": {
+      "sha256": "c1fb72a645916fe01590be77c6511653b145f50563ec5464bfcbd52c0aa9c0ee",
+      "type": "image/png"
+    },
+    "Icones/GENERAL SHOPPING E OUTLETS DO BRASIL.png": {
+      "sha256": "d77d882fcbd6cbf57a5a0b639723a95c7a6a7620d9f677eff7f9b6d9fc7b3327",
+      "type": "image/png"
+    },
+    "Icones/GP Investments.png": {
+      "sha256": "ea6d81ae9760240307fcc3a00f10079d7e6f3a0a4379df99c56c36e14ad5c942",
+      "type": "image/png"
+    },
+    "Icones/GPA.png": {
+      "sha256": "8691758693825ff78375cf25c380633905fed29010ad2e7a084d2b606bee4cf7",
+      "type": "image/png"
+    },
+    "Icones/GRANJA FARIA.png": {
+      "sha256": "2589f4919a564366eec9be17e201448f23adbf36c13a3fb8f64ed423bee0b8c0",
+      "type": "image/png"
+    },
+    "Icones/GRUPO CVLB.png": {
+      "sha256": "6d0457a8bf303f9acb609c0d253014e18783918de42440dda0acabcc9a7cf083",
+      "type": "image/png"
+    },
+    "Icones/Gafisa.png": {
+      "sha256": "4d38195e9b084638a706c49dc96ed1d7d8f6e61e19f0ac3d32c19da7e0696050",
+      "type": "image/png"
+    },
+    "Icones/Gerdau Met.png": {
+      "sha256": "97e465cc4c5c522ea9c11bf2da473fb0e43ab4224c47f6b2144f5691e8ccf64d",
+      "type": "image/png"
+    },
+    "Icones/Gerdau.png": {
+      "sha256": "0ee4ebdef4f41869f37748d22e50572410b406328b58415d05cae3584afbe396",
+      "type": "image/png"
+    },
+    "Icones/Getninjas.png": {
+      "sha256": "b548090c612fcace19a0792d1b577888dfdce13ec70340ab7a882547fa812afc",
+      "type": "image/png"
+    },
+    "Icones/Gol.png": {
+      "sha256": "594160e8f315756dc3385bbe02861ea9b0692346ba67b17c79e15568ed9ddfb1",
+      "type": "image/png"
+    },
+    "Icones/Grazziotin.png": {
+      "sha256": "f3f0d00b40ea21cb3003c2f7ed8d329bdf10dcdfafae3853139ab73d8d7823c2",
+      "type": "image/png"
+    },
+    "Icones/Grendene.png": {
+      "sha256": "668c722be838580c2f6d4fc930be560139fcbd95dd9cf7fd233b5ccbad026a2a",
+      "type": "image/png"
+    },
+    "Icones/Grupo Casas Bahia.png": {
+      "sha256": "659d4cac3e238002d42ad095dededc7715d0b67566182a3a97af31a75efcf547",
+      "type": "image/png"
+    },
+    "Icones/Grupo Dimed.png": {
+      "sha256": "e6f9f65bec2dfdbbfe5e8c36d5814509b2e3c73bdb7c13b0fb8757783095a565",
+      "type": "image/png"
+    },
+    "Icones/Grupo GPS.png": {
+      "sha256": "79b83f1b1de4b682b216fa6b6b822a19b7844f759d33455d9cd129dcc1a4f4c7",
+      "type": "image/png"
+    },
+    "Icones/Grupo Mateus.png": {
+      "sha256": "a40ca62c692569d3f94f4163d6252683adbfe697bf148fb7b3a835e835dd70b6",
+      "type": "image/png"
+    },
+    "Icones/Grupo Natura.png": {
+      "sha256": "3eb1515719c45457ec3cd358e52c39ec7528849519c73976f2b9d40d75b3cfcc",
+      "type": "image/png"
+    },
+    "Icones/Grupo Panvel.png": {
+      "sha256": "56379f80995748c30d11ef3bf55e93fa9598a0d8e4d3ae50f96fa2a1d0e9df73",
+      "type": "image/png"
+    },
+    "Icones/Grupo Pardini.png": {
+      "sha256": "0147962497112a3538f84f56c4e869a91329775e9e0709d1059398d3b48c690a",
+      "type": "image/png"
+    },
+    "Icones/Grupo SBF.png": {
+      "sha256": "f576fa65c80465f8b34056dcd397a033c93d9a2f9b7772224305d93a21d81b36",
+      "type": "image/png"
+    },
+    "Icones/Grupo Soma.png": {
+      "sha256": "e8d9f3181358bd1a57dfffd158a9826a7ab32bb2d89ed1e8cb6f4f087adfcff0",
+      "type": "image/png"
+    },
+    "Icones/Grupo Toky.png": {
+      "sha256": "2cbeb540a78b6c7fa87f7470250e7bf97ab284463d002f71d7bb57e5dd25e37d",
+      "type": "image/png"
+    },
+    "Icones/Guararapes.png": {
+      "sha256": "2f704503d0584393f655b386c5165e8bd1d8a1ddcee753611f406bebe8a6f27f",
+      "type": "image/png"
+    },
+    "Icones/HBR Realty.png": {
+      "sha256": "3bca9fed3fd999e8f10fa48ee268273955177077df4d3a4d763578f69c5fd493",
+      "type": "image/png"
+    },
+    "Icones/Haga.png": {
+      "sha256": "31882e556f9e7a7e70fdf013a0f2d091ec89f8d1ac5f133f4d9f28bb6aa26a17",
+      "type": "image/png"
+    },
+    "Icones/Hapvida.png": {
+      "sha256": "aec8ed8d5667b273b6c97ff44c46d0ee1c3726c80a436153340b70b265bf2963",
+      "type": "image/png"
+    },
+    "Icones/Helbor.png": {
+      "sha256": "9c8a1f040ff028f61c64ecd7daf94ecad0165fb66f77464dad161992e932fe3b",
+      "type": "image/png"
+    },
+    "Icones/Heringer.png": {
+      "sha256": "ce8bd837a7d0f2391a4e1fd4a51651350fa5e85eafbbba5b6433f8b179d0700f",
+      "type": "image/png"
+    },
+    "Icones/Hidrovias.png": {
+      "sha256": "b3e3e33fbcccc35d4cd9672eee05824b45592b99e0c6bd635843cc14cf148f4a",
+      "type": "image/png"
+    },
+    "Icones/Hoteis Othon.png": {
+      "sha256": "fa052931943183a91fcde9ffa87de36dc0ac14450bae7ea1649eca942a0e875a",
+      "type": "image/png"
+    },
+    "Icones/Hypera.png": {
+      "sha256": "2dfe26c6fe1a5d612178ff2fc8b140c9f8fc207485c573725aeeb7fa441a1765",
+      "type": "image/png"
+    },
+    "Icones/IGB.png": {
+      "sha256": "e8848132ab01400cb8a5ee04c244795d0fd83da291cc761184f63c5da6bf1503",
+      "type": "image/png"
+    },
+    "Icones/IMC.png": {
+      "sha256": "09132066b59c2c0fd6ee7ca5342947f41cb3a3ce1d5a9e58c5e1fed866164f01",
+      "type": "image/png"
+    },
+    "Icones/INC.png": {
+      "sha256": "6f048c1479b2fd03b7da48d46f9008417ab29960579688a0ffca2784c776812d",
+      "type": "image/png"
+    },
+    "Icones/IRB (Re).png": {
+      "sha256": "47827173c3655057cbae68e11c33f87d5a23ab602db918115c26f235af66d1d5",
+      "type": "image/png"
+    },
+    "Icones/IRB Brasil.png": {
+      "sha256": "47827173c3655057cbae68e11c33f87d5a23ab602db918115c26f235af66d1d5",
+      "type": "image/png"
+    },
+    "Icones/ISA Energia Brasil.png": {
+      "sha256": "1a56c67f78a7cface71314a4a7dce528f5d81356af8e48369a356bf2c030bae5",
+      "type": "image/png"
+    },
+    "Icones/Igua.png": {
+      "sha256": "c71bd96feacd1b03c9a5da7880ecf408a2227dd6b71217aaa20e690b09032d87",
+      "type": "image/png"
+    },
+    "Icones/Iguatemi.png": {
+      "sha256": "8890ff85bf536b0ca947aa1c965eac554aaeeaa5469e5d61a7eeb7a78f0f3ab2",
+      "type": "image/png"
+    },
+    "Icones/Iguá.png": {
+      "sha256": "c71bd96feacd1b03c9a5da7880ecf408a2227dd6b71217aaa20e690b09032d87",
+      "type": "image/png"
+    },
+    "Icones/Inbrands.png": {
+      "sha256": "c38f2590f43ca8a945560c1268991b1a61bf34dc450063eb083dc6357af412b6",
+      "type": "image/png"
+    },
+    "Icones/Inepar.png": {
+      "sha256": "4b68386aece611a4f22e3fa4634a1fb45f2d3f9146bc9387db1f228195af9d1a",
+      "type": "image/png"
+    },
+    "Icones/Infracommerce.png": {
+      "sha256": "22d7d84d1b62af875c10c10f5dc2c6478895ea779d0d92b296c09325e4198795",
+      "type": "image/png"
+    },
+    "Icones/Intelbras.png": {
+      "sha256": "e67e04f5adacafb6663f1b81c6214c516f2940e3c838355d620768d7cb9f816f",
+      "type": "image/png"
+    },
+    "Icones/Inter & Co.png": {
+      "sha256": "d2eca4ae72941c28028ad84c87e10b3fe05c8dad52637aa3c08d2f71d360eaad",
+      "type": "image/png"
+    },
+    "Icones/Inter Construtora.png": {
+      "sha256": "eb0a9859fb8546e7b532e88d9bf69e24f1b6c670a42d94e7a9fae244b72d098c",
+      "type": "image/png"
+    },
+    "Icones/Inter&Co.png": {
+      "sha256": "1047aab56df3d4c3b61b8346ab1f71172211c855668fa3a3ce982e0a2bfa75a4",
+      "type": "image/png"
+    },
+    "Icones/Intercement.png": {
+      "sha256": "d30f7ac65ac1ca636434dde94a4d5985a88b368c973d2b27041a36fc0840505a",
+      "type": "image/png"
+    },
+    "Icones/Invepar.png": {
+      "sha256": "eb7f2c564289a93b957a74804a707948844bcdb4e76f67bb0d99659791ef9d60",
+      "type": "image/png"
+    },
+    "Icones/Iochpe-Maxion.png": {
+      "sha256": "d9a8408fd60cdcfeb790477c5ec9e0a297e01fb91cf05563fc2f12fa198758f4",
+      "type": "image/png"
+    },
+    "Icones/Irani.png": {
+      "sha256": "2c1a17c2d96b78210746c25f6ac162f12159b63ab82912551ae9a5628eb1b479",
+      "type": "image/png"
+    },
+    "Icones/Itaú Unibanco.png": {
+      "sha256": "eea9c2aabe8a84e585ccdeea8804dfee9ce453479fb32f42ac7103aded3d90b9",
+      "type": "image/png"
+    },
+    "Icones/Itaúsa.png": {
+      "sha256": "aae9a697b460ec9166868825ddb70e8815aaeb93c003a153884cb1ce453f4fd5",
+      "type": "image/png"
+    },
+    "Icones/JBS.png": {
+      "sha256": "d617e4f678c1be45e19d9c27a704c7588f4a93c4010a2eb36dfe85f53b7beb55",
+      "type": "image/png"
+    },
+    "Icones/JHSF.png": {
+      "sha256": "42f36139d13a80b29891b6a9d07c167a693acbaeb40a96dc8dba5b8ea19c60d0",
+      "type": "image/png"
+    },
+    "Icones/JSL.png": {
+      "sha256": "f8c9f46696a34e7a38568275c3543743443e0e48bdd4782738f4365570553146",
+      "type": "image/png"
+    },
+    "Icones/Jalles Machado.png": {
+      "sha256": "8410f9ec8429bb12c902152db9111ef0235b6fc7b1085e23a2ead400f0f1a0dd",
+      "type": "image/png"
+    },
+    "Icones/João Fortes.png": {
+      "sha256": "244e1cbe367e251eda338766191aa9dbaa9f78f2088d0075a63beacc1db3cc5d",
+      "type": "image/png"
+    },
+    "Icones/Kallas.png": {
+      "sha256": "a0854f26390a7a64b4d249ef27f111eb2b0ac3a17572f4c355a48761608b3383",
+      "type": "image/png"
+    },
+    "Icones/Karsten.png": {
+      "sha256": "09971a274df6f4c1a3ac6b51525f478815ad397d461028fadaf3b8103661e1de",
+      "type": "image/png"
+    },
+    "Icones/Kepler Weber.png": {
+      "sha256": "b889310b852019b0cc262f3732c254ca160eaa1e18b09cfca7a2ed8a7a36045b",
+      "type": "image/png"
+    },
+    "Icones/Klabin.png": {
+      "sha256": "e6123ae268a5107251358237c9f3cb56c870000b421b5934d9975e6ca9673e72",
+      "type": "image/png"
+    },
+    "Icones/Kora.png": {
+      "sha256": "15e5d09ba4680c6c28801f3908dee4af65a8a89648820e71688bd7edb9f81d5f",
+      "type": "image/png"
+    },
+    "Icones/LPS Brasil.png": {
+      "sha256": "abd8320a527c0f40e989daaff2ed0a733697cbb1194166fd14b176f7eab20de6",
+      "type": "image/png"
+    },
+    "Icones/LWSA.png": {
+      "sha256": "24754111ffdc0aa6a246861293652c4d041752631ff5eb34516156ed16958f05",
+      "type": "image/png"
+    },
+    "Icones/Lavoro.png": {
+      "sha256": "24c5494262fa313e8f47ef22786c4d75f6b1a74bcf45162d8bd83d5863688a70",
+      "type": "image/png"
+    },
+    "Icones/Lavvi.png": {
+      "sha256": "fb8f11e504f9836709e7af6341c75f8e0b993f89f91ef777f9a8f3c4186f1a0c",
+      "type": "image/png"
+    },
+    "Icones/Lifemed.png": {
+      "sha256": "4dfb4e22d1419cd27dd742f89e968726a8c7f596d167b7a045b3c99678650c59",
+      "type": "image/png"
+    },
+    "Icones/Light.png": {
+      "sha256": "bdf06d98e2bedf6c62b6430c854b5b1b3acddb1cecfd31a548d8b9d26d3a0801",
+      "type": "image/png"
+    },
+    "Icones/Localiza.png": {
+      "sha256": "e2133f345e8d58b1c30310635a73c7a7a3800945ec1335d337b8bd3e3fcd0a22",
+      "type": "image/png"
+    },
+    "Icones/Locaweb.png": {
+      "sha256": "ea640859c45051f5328a6dd923a838ef17edb3c46ab54b0177a47e3298c2b089",
+      "type": "image/png"
+    },
+    "Icones/Log In.png": {
+      "sha256": "a30893ab05ff63ff128d0a28cf21916b234a335bba5641d0a10a2c8fc98e99f6",
+      "type": "image/png"
+    },
+    "Icones/Log.png": {
+      "sha256": "aca230cab64955ae5c14636f2aedd16b6c85d8db8804ba7eacaf3875bebeafe6",
+      "type": "image/png"
+    },
+    "Icones/Lojas Marisa.png": {
+      "sha256": "9652bda817b84dab2a0618e3738502e575d537ed1098ae58012311872e63ecbe",
+      "type": "image/png"
+    },
+    "Icones/Lojas Quero-Quero.png": {
+      "sha256": "2bf183527008b8e3b914566ee8af3ec01ae8dd5a615c3ac2b112136cc3edf2e9",
+      "type": "image/png"
+    },
+    "Icones/Lojas Renner.png": {
+      "sha256": "7b2801c7d6920b73e42be6ebebd92766ad1d2ca533bc00ebd8668cee1e720587",
+      "type": "image/png"
+    },
+    "Icones/Lopes Brasil.png": {
+      "sha256": "abd8320a527c0f40e989daaff2ed0a733697cbb1194166fd14b176f7eab20de6",
+      "type": "image/png"
+    },
+    "Icones/Lupatech.png": {
+      "sha256": "eba6aec404f81d708b570d88e8329bec070fd7f410c9fb4b4ae6627d304dfc21",
+      "type": "image/png"
+    },
+    "Icones/M. Dias Branco.png": {
+      "sha256": "05432da45f882404823909077833203579b91ebd620e089d78b51cd206491c98",
+      "type": "image/png"
+    },
+    "Icones/MBRF.png": {
+      "sha256": "6223b694d9496958e0e901772fa9742ccf10a7d2a3815a78407ad77b640a6c76",
+      "type": "image/png"
+    },
+    "Icones/MLog.png": {
+      "sha256": "f9f04bf5e6c50160c6067d2dc50ed11547f778d35615e1dbaea58c9b752b9b6b",
+      "type": "image/png"
+    },
+    "Icones/MRS.png": {
+      "sha256": "68799ea3fb0b1256f8bba4b42d8a7558767e8befbec76bcbfd2aaeee1317f26b",
+      "type": "image/png"
+    },
+    "Icones/MRV.png": {
+      "sha256": "93a14a2394f14c89663bfb1a68b59508465b77fa5f05034b747cb0488daca662",
+      "type": "image/png"
+    },
+    "Icones/MZ/icon-Divulgações@3x.png": {
+      "sha256": "7a61e8a0715d2c7f5da20821dc6a345c17b2c3eaed475e3a1cae14e5b861203c",
+      "type": "image/png"
+    },
+    "Icones/MZ/icon-calendar@3x.png": {
+      "sha256": "9aa2e750246da3c877b68bf44d523a09110f56bc107783612533ae63180c2caf",
+      "type": "image/png"
+    },
+    "Icones/MZ/icon-conferencias@3x.png": {
+      "sha256": "d722a6e3016442e85f339513c58bf3508646809ee469f4a8c7bac3077e28ff8c",
+      "type": "image/png"
+    },
+    "Icones/MZ/icon-investor-day@3x.png": {
+      "sha256": "05cf36610931361a69b509d982e4dbca2271fb7babc3f8bbfb2cdfee728ad588",
+      "type": "image/png"
+    },
+    "Icones/Maestro.png": {
+      "sha256": "08103fe5a2ec3bf41ca4589668da65f2563720a6bdd3ee69cc8744abff4e29f5",
+      "type": "image/png"
+    },
+    "Icones/Magazine Luiza.png": {
+      "sha256": "2a2362c9109abe8fa47db6dd84a5462325278498a792522c29d7838969aa7630",
+      "type": "image/png"
+    },
+    "Icones/Mahle.png": {
+      "sha256": "1ed86195891edeb8ff44d48f032eaee27c32e241af1f58f724316a6c863fe359",
+      "type": "image/png"
+    },
+    "Icones/Marcopolo.png": {
+      "sha256": "d3fbd34e699d212dcd2462c41e849e2cb1ca5da89d50a187c465ff7f724b6549",
+      "type": "image/png"
+    },
+    "Icones/Marfrig.png": {
+      "sha256": "efff69932899f469085d2328da9e56f3d3774af5761fc0a50bf836e52e2d8685",
+      "type": "image/png"
+    },
+    "Icones/Marisa.png": {
+      "sha256": "9652bda817b84dab2a0618e3738502e575d537ed1098ae58012311872e63ecbe",
+      "type": "image/png"
+    },
+    "Icones/Mater Dei.png": {
+      "sha256": "b5bbb0a7c84a73b7733cde6204e61581e266494dfe4bc42862675aa791f4dd6b",
+      "type": "image/png"
+    },
+    "Icones/Meliuz.png": {
+      "sha256": "7b1481a3ce681c89d13c5c9a6502c2ea639de9fc78e260311cfd59865efa6828",
+      "type": "image/png"
+    },
+    "Icones/Melnick.png": {
+      "sha256": "dacabece2b7ae8ae50c0ec13a6b491f5def3610c200528e7e10168b864a4b699",
+      "type": "image/png"
+    },
+    "Icones/Metalfrio.png": {
+      "sha256": "95198810a2766fdcb0626a9b27ae75222f71261504718f99492eed35192cd18a",
+      "type": "image/png"
+    },
+    "Icones/Metisa.png": {
+      "sha256": "d2e427fc497c5fc5ac6e0de41779dba747ae38d75bf8c6ea23dd0a512c70daf4",
+      "type": "image/png"
+    },
+    "Icones/Mills.png": {
+      "sha256": "2d7be7a62bdf12f9ff2e83144915e8e960a618c20c6c1a0bb14917e06a435d03",
+      "type": "image/png"
+    },
+    "Icones/Minas Máquinas.png": {
+      "sha256": "67e554ba4c0695948feed023300e7e1cd1cd3421f1be0ede9d55596614d1d9e9",
+      "type": "image/png"
+    },
+    "Icones/Minerva.png": {
+      "sha256": "551fc16a5653a77d6ecfdeb1a7c3cc68cf08b60410107274afacea3bd4c99755",
+      "type": "image/png"
+    },
+    "Icones/Mitre Realty.png": {
+      "sha256": "260a822bf42b463dcd37e1b4a8857a9cb06c1a3ec7a66d4ce69d8cda9251d853",
+      "type": "image/png"
+    },
+    "Icones/Mobly.png": {
+      "sha256": "4d1cfa79de96d39ed4e056a84f9e115e3cd639589603719439ba02dde7e9fa0c",
+      "type": "image/png"
+    },
+    "Icones/Monteiro Aranha.png": {
+      "sha256": "81365543baf770ee98062f1182ce08b60b0c24785a28b7f92b9e6cd3de6eab0b",
+      "type": "image/png"
+    },
+    "Icones/Motiva.png": {
+      "sha256": "ae87b92a98b6226467ce31f666ee219986f7353d61f2e14a48bbdb8619fa66b5",
+      "type": "image/png"
+    },
+    "Icones/Moura Dubeux.png": {
+      "sha256": "0e2bfc0e9e9c3a92c648ca9bdcf62f0b8b46cc42292b28fc9822e7344e4f06cb",
+      "type": "image/png"
+    },
+    "Icones/Movida.png": {
+      "sha256": "a33e9ae43114416a0194e899d10d15b5d17800af70247e4db27d487da2c14751",
+      "type": "image/png"
+    },
+    "Icones/Multi.png": {
+      "sha256": "0c66eb7fa6e105b1960c853a48fbf895447c723d7aae29f78cd3d525db7e7d0f",
+      "type": "image/png"
+    },
+    "Icones/Multiplan.png": {
+      "sha256": "94472b11b05ee56f22ae69b5a72bc6db96e86d47fc92ace8a6858200d48d2bd1",
+      "type": "image/png"
+    },
+    "Icones/Méliuz.png": {
+      "sha256": "7b1481a3ce681c89d13c5c9a6502c2ea639de9fc78e260311cfd59865efa6828",
+      "type": "image/png"
+    },
+    "Icones/NTS.png": {
+      "sha256": "4137ee9c0ac61f9d12c517598deb2119add0e6463ea272aaea0455686b116491",
+      "type": "image/png"
+    },
+    "Icones/NUVINI.png": {
+      "sha256": "1be3de9ae542c756a562e08f2422fcb40eb7e8213a055777efbf88449284c86f",
+      "type": "image/png"
+    },
+    "Icones/Neoenergia.png": {
+      "sha256": "581c5947fb52ad44be2aaf35c632bd8af0690b5c7c62a970c11a9651e6634c26",
+      "type": "image/png"
+    },
+    "Icones/Neogrid.png": {
+      "sha256": "9a5a2a58ea579626b9f6cf00a427cebd465080d918dee2396104f7f79f3e8837",
+      "type": "image/png"
+    },
+    "Icones/Nexa Resources.png": {
+      "sha256": "5d2f0d136d23a624cf712e799b0a69ff2ae795ece7c2456473f8bd23ee6bc852",
+      "type": "image/png"
+    },
+    "Icones/Nexpe.png": {
+      "sha256": "76441d8eea73f09713cb1afc8764234a5f20b4e103e6ef9b32fcdb2799816ad9",
+      "type": "image/png"
+    },
+    "Icones/Nordon.png": {
+      "sha256": "c17314ee05616b42cbcb654591387c3f7f66b7a2819cb6dcbb0aa6d8eda977e0",
+      "type": "image/png"
+    },
+    "Icones/Nortcquimica.png": {
+      "sha256": "993e17eef446529875485e498691619dbe60ce997d61a161966b1221e021a1de",
+      "type": "image/png"
+    },
+    "Icones/Nu.png": {
+      "sha256": "11912a4ef3bd21dc10ddee5fdbcee8017d46ffd6d6d47879370c5584a85bc7a4",
+      "type": "image/png"
+    },
+    "Icones/Nutriplant.png": {
+      "sha256": "06a388174314d7920325d49eb048b236e5b6907db3e1f755e7d8012c9bba4d44",
+      "type": "image/png"
+    },
+    "Icones/OSX.png": {
+      "sha256": "5fe586a88f76bd4a75b6a879041238c9dce9f3ca1294a77b54021fbf57dd30fa",
+      "type": "image/png"
+    },
+    "Icones/Oceanpact.png": {
+      "sha256": "d9b63c389a29a26505910a8bc18bd9fd6acca0f4223b0e62f0f246f193910d1b",
+      "type": "image/png"
+    },
+    "Icones/Odontoprev.png": {
+      "sha256": "3ce9c5a0115a46064b687de7ae99d7055e18da991aced2591073858eccea60e6",
+      "type": "image/png"
+    },
+    "Icones/Oi.png": {
+      "sha256": "c1911a83f06d9459d04782775f9f9142898a00b2c38a9a9b2aa7c737fde07e84",
+      "type": "image/png"
+    },
+    "Icones/Oliveira Trust.png": {
+      "sha256": "5e0a438e0755dc11b63b770d38a201f3d68ff7c4028d834d3c8dbb20fdd4ada0",
+      "type": "image/png"
+    },
+    "Icones/Omega.png": {
+      "sha256": "1cae6139a402b99e39deae3e331060c014861c234edadc307f907eb308259386",
+      "type": "image/png"
+    },
+    "Icones/Oncoclinicas.png": {
+      "sha256": "6ef6c99729fd0134caf70a227205269df1be4c16d942e5c127dafd7f9a68b3ad",
+      "type": "image/png"
+    },
+    "Icones/Orizon.png": {
+      "sha256": "6674020c3c867486382bbc13332e69a6711635a00e48e27bbc7cc6fd34c97461",
+      "type": "image/png"
+    },
+    "Icones/Ourofino.png": {
+      "sha256": "8f93cb8d05310d5cbeb2f0426cc1b25f466442a6a7eb528ff867f4521e7a99e4",
+      "type": "image/png"
+    },
+    "Icones/PACAEMBU CONSTRUTORA.png": {
+      "sha256": "24cd09128180d5cebe04e7a96cf7e8e454e4e2290811f7c3f10df4010234752d",
+      "type": "image/png"
+    },
+    "Icones/PDG.png": {
+      "sha256": "18713a28f76675d43206dff87b2fe1b9c06362353c36092f85a6d9c56facb47b",
+      "type": "image/png"
+    },
+    "Icones/PPLA.png": {
+      "sha256": "cc6359a943c5c5399ef786364d07bb356de7d59c750207033e7eb4d7ec844ed2",
+      "type": "image/png"
+    },
+    "Icones/Padtec.png": {
+      "sha256": "2339da5c939fe2d80e1e45adc0ad5f72a5751efa7e99af1a0411ca5bee89a9bd",
+      "type": "image/png"
+    },
+    "Icones/Pagseguro.png": {
+      "sha256": "aeeeb8552bacf91df008f59822696a4e38d9f1fbee4141261cf6fa06c6db2d0e",
+      "type": "image/png"
+    },
+    "Icones/Pague Menos.png": {
+      "sha256": "9054c179805d734a510f6d52c4945fe5e42d0a590be454cccac616cb58a00ed7",
+      "type": "image/png"
+    },
+    "Icones/Parana Banco.png": {
+      "sha256": "34fe5c1577d730ea0ff78a1a9d423cc5d504572aa3bf6555a3ea925c77f4c545",
+      "type": "image/png"
+    },
+    "Icones/Paranapanema.png": {
+      "sha256": "4c8b3a47174ef88975b3185a0210a53164bf9fa2ded74a61bbe0008f62563e09",
+      "type": "image/png"
+    },
+    "Icones/Paraná Banco.png": {
+      "sha256": "34fe5c1577d730ea0ff78a1a9d423cc5d504572aa3bf6555a3ea925c77f4c545",
+      "type": "image/png"
+    },
+    "Icones/Patria.png": {
+      "sha256": "71a66bf8f37a5f3da6c62f0f661e55c2a849c97415290c6ebd5fd347b2b5d5f2",
+      "type": "image/png"
+    },
+    "Icones/PetroReconcavo.png": {
+      "sha256": "149414efe9cefdfbe6aa313be3086c7cbd7b230b2d95848664516e43ed490248",
+      "type": "image/png"
+    },
+    "Icones/Petrobras.png": {
+      "sha256": "3d8704b4f38dce28447f3a38538b57c2068cf976b700f9614c816474afa61aa2",
+      "type": "image/png"
+    },
+    "Icones/Pettenati.png": {
+      "sha256": "35ab04cc61627d70e7899e09a764be7df164c08d0ebcb81bf8d42d77fd19e7b5",
+      "type": "image/png"
+    },
+    "Icones/Petz.png": {
+      "sha256": "bfd3ef7380174975d7f585b756c5a245f7671cc849997ec942d489ebdb924cfe",
+      "type": "image/png"
+    },
+    "Icones/Pine.png": {
+      "sha256": "6d1e220bdba472126fbdc87d436c8f628f2026f292e75eb66f31d4c0ed292870",
+      "type": "image/png"
+    },
+    "Icones/Plano&Plano.png": {
+      "sha256": "9895cc0b7dfc0d4684052963cf34ddd4cc299aa46f7b6897fdf7ca4771c29e60",
+      "type": "image/png"
+    },
+    "Icones/PlanoEPlano.png": {
+      "sha256": "9895cc0b7dfc0d4684052963cf34ddd4cc299aa46f7b6897fdf7ca4771c29e60",
+      "type": "image/png"
+    },
+    "Icones/Plascar.png": {
+      "sha256": "5da60c5a45ff0288a5d4925989bcf7e69ace9068bac95b0db675f106ebdefa8e",
+      "type": "image/png"
+    },
+    "Icones/Pomifrutas.png": {
+      "sha256": "de0bcec8e4f7b52185e74dba81278680afe5e33d8d812cf953c6e7865aa5b4b3",
+      "type": "image/png"
+    },
+    "Icones/Porto Seguro.png": {
+      "sha256": "1599f74610a348410889ebd0849f04c13eeac94468541b3fc52d2d5bc68e6b4e",
+      "type": "image/png"
+    },
+    "Icones/Portobello.png": {
+      "sha256": "a581740d12bc307029154a537eba806f35c6e87cd68b9396dea2e2629375b990",
+      "type": "image/png"
+    },
+    "Icones/Positivo.png": {
+      "sha256": "7a156de3c47aa2365f6a43a4697628f1e68855f142c1963aab897352c4d33a0b",
+      "type": "image/png"
+    },
+    "Icones/Pratica.png": {
+      "sha256": "e744ed92a5c18dd91ee05c98f95820fcb8c172f3116856880b4d4e934bdd4d6e",
+      "type": "image/png"
+    },
+    "Icones/Priner.png": {
+      "sha256": "13ac31c31fc8d9e33e48ef4e33025f3813adf62114bb7a0ba02631c60487af48",
+      "type": "image/png"
+    },
+    "Icones/Prio.png": {
+      "sha256": "3222d1556992b25d6da2ca2aaede96cebbde03c13666ae3dfcf46204e9fc3959",
+      "type": "image/png"
+    },
+    "Icones/Profarma.png": {
+      "sha256": "f020d5f51a6e253d39e42deb89208162708c67e8c509a06090d031f2d89d3037",
+      "type": "image/png"
+    },
+    "Icones/Prática.png": {
+      "sha256": "e744ed92a5c18dd91ee05c98f95820fcb8c172f3116856880b4d4e934bdd4d6e",
+      "type": "image/png"
+    },
+    "Icones/Qualicorp.png": {
+      "sha256": "c6dff26fdda533bd18cde20100db67b0711d10c9ae7182a08494de989940b5b5",
+      "type": "image/png"
+    },
+    "Icones/Quality Soft.png": {
+      "sha256": "6df6660010605649436115b31a9ca3f882c9b5c671638d7c9bf5a34be8eee9e2",
+      "type": "image/png"
+    },
+    "Icones/RD Saúde.png": {
+      "sha256": "1baf5659418201a9f839234f3fa38f8de2324cb293f4dea540deb4c588497a84",
+      "type": "image/png"
+    },
+    "Icones/RNI.png": {
+      "sha256": "445c8b1b31fd1f1a54ec38706c44acbfacd0eb26b144d7a25745366c0140c52e",
+      "type": "image/png"
+    },
+    "Icones/Raia Drogasil.png": {
+      "sha256": "c9f78e41d6a21e39e5bfcfeb38fb0d496989de25fc50bc40f2e401e239256c51",
+      "type": "image/png"
+    },
+    "Icones/Randon.png": {
+      "sha256": "999b6fdeaa1d47d350923236a67fbf2b39cb670aa2782692e0a8eb755bc3551a",
+      "type": "image/png"
+    },
+    "Icones/Raízen.png": {
+      "sha256": "8b03d74fcb688679a015eb0e9b9f67a917524bb1b5ec3478bb791e3cbcf8c84b",
+      "type": "image/png"
+    },
+    "Icones/Reag Investimentos.png": {
+      "sha256": "98d96b4d4feb439e734e3d266111ab20726865baf85db172230faa63ebbfcad8",
+      "type": "image/png"
+    },
+    "Icones/Recrusul.png": {
+      "sha256": "4818676e01bc3c63191044aaacb0c57a0c004e5aa57fb09b3f4c12e3a6c9120f",
+      "type": "image/png"
+    },
+    "Icones/Rede D_Or.png": {
+      "sha256": "7c2622cdaae5828d268ac0b4feaf344da4b2a6dda1177cee1df6d96453ebf3e1",
+      "type": "image/png"
+    },
+    "Icones/Refinaria Refit.png": {
+      "sha256": "a3cdd7d35058075111193c7f8810cc5941183b1904c0cd695bf16c8e9a993efc",
+      "type": "image/png"
+    },
+    "Icones/Refit.png": {
+      "sha256": "a3cdd7d35058075111193c7f8810cc5941183b1904c0cd695bf16c8e9a993efc",
+      "type": "image/png"
+    },
+    "Icones/Renova Energia.png": {
+      "sha256": "00a091141feabdaca18d4d9163964c13cd0f54e992de59ea1f2faa5a47c03a51",
+      "type": "image/png"
+    },
+    "Icones/Rodobens.png": {
+      "sha256": "7a76bfd5695376a449d1645c078acc12bde71dba2a4ccb4c49e187e3ed4d3d13",
+      "type": "image/png"
+    },
+    "Icones/Romi.png": {
+      "sha256": "7fc1c9a6acb5520256e2025549fa46c9efee5cd04c55de9b416cde88f49182e6",
+      "type": "image/png"
+    },
+    "Icones/Rossi.png": {
+      "sha256": "bcf8e03ceb0f3cf7a8d57bc4d2c70a8d87b442dbb0f3c3325cdf999f2f0a2ed1",
+      "type": "image/png"
+    },
+    "Icones/Rumo.png": {
+      "sha256": "e2b93d56a59064c942b5fd7d81bb15ad6278812b3b9580f16f8a1d07304d04f9",
+      "type": "image/png"
+    },
+    "Icones/SLC Agricola.png": {
+      "sha256": "b1fdbb79f58f5fbefd9c3c7f275147e80b949c7f166aaeff4ce968f067bafee6",
+      "type": "image/png"
+    },
+    "Icones/Sabesp.png": {
+      "sha256": "f2bbd5666b96713ea422025b38420ad8bb1abd9e20a07ea44ebd120afb4766d9",
+      "type": "image/png"
+    },
+    "Icones/Samarco.png": {
+      "sha256": "6ad2c80cdfd0c10db2c00914ba645c7e3729b925cfc1801d7d368c776284dc65",
+      "type": "image/png"
+    },
+    "Icones/Sanepar.png": {
+      "sha256": "e91f4d8df7147fadf72a3ea09b5248d1231a6c1f2b36ea2d0907cd6e79e75bc9",
+      "type": "image/png"
+    },
+    "Icones/Sansuy.png": {
+      "sha256": "b161e3b5212d08864b1c2b61f0f1b27229cadbe9d10cc029026d447ef16ad316",
+      "type": "image/png"
+    },
+    "Icones/Santander.png": {
+      "sha256": "f53cfac71d56dd7f48afa21049dda4c150481a16a6ee51c4ff73950dd39b64c3",
+      "type": "image/png"
+    },
+    "Icones/Santo Antônio.png": {
+      "sha256": "815fb8a1467d6536de977c91c66579bac4473acc1db3e39de36d13985f7a5e9f",
+      "type": "image/png"
+    },
+    "Icones/Santos Brasil.png": {
+      "sha256": "206a02c0340c4a64747cc6741e851e8a6cbf827b80d295f905381018cd79c887",
+      "type": "image/png"
+    },
+    "Icones/Schulz.png": {
+      "sha256": "95f6fff274c8f7ba04ad9b39a51b2395bbbcd98bb80a9f35b2c4a7902bf5b6b9",
+      "type": "image/png"
+    },
+    "Icones/Semantix.png": {
+      "sha256": "66085c4d23ca0b1c67de827fe6f4e457988613bd7044ee1c2e2c17df8c7a270e",
+      "type": "image/png"
+    },
+    "Icones/Sequoia.png": {
+      "sha256": "dcb7b32206c6047db8745b19fe2318d777bb390576f2989a3e55c11c1e135350",
+      "type": "image/png"
+    },
+    "Icones/Ser Educacional.png": {
+      "sha256": "a7ea61042266755bc735620955975460d9a74c9fca4897351170e40470b35988",
+      "type": "image/png"
+    },
+    "Icones/Serena.png": {
+      "sha256": "7d043673b7426f864105fecc4bd0429def29596b1283556e3f89fd903e949ae4",
+      "type": "image/png"
+    },
+    "Icones/Sigma Lithium.png": {
+      "sha256": "f8ff0b8c52c2f794d5021ba2b9d274fafb4bb40098ebd7c969da8cf94a22ed87",
+      "type": "image/png"
+    },
+    "Icones/Simpar.png": {
+      "sha256": "4daff9374daeb4a3feeab8f6235630f4e93988bb679ddde6ed20e91b1d238490",
+      "type": "image/png"
+    },
+    "Icones/Sinqia.png": {
+      "sha256": "ce86501572870a63a6dd869d3e33995f95fd5afd5cc0acf832a170237d4cacbc",
+      "type": "image/png"
+    },
+    "Icones/Smart Fit.png": {
+      "sha256": "822f0b5557c6d34b6bfa6d51db18d9904ddd1ca2a361bf49f7021c6d62ae10cb",
+      "type": "image/png"
+    },
+    "Icones/Solar.png": {
+      "sha256": "6fae058d4a1733457e95f08149e5f4f3584cb039ce0953976395005891adbcdd",
+      "type": "image/png"
+    },
+    "Icones/Springs.png": {
+      "sha256": "06758b3c70d27cfac3e820dd80b0110f466471368f3162ee64d3a1f483eb14f7",
+      "type": "image/png"
+    },
+    "Icones/Stone.png": {
+      "sha256": "df2a6418e6d8ff4c704b0078442f692504c79a6e86028eda417138910a9f0104",
+      "type": "image/png"
+    },
+    "Icones/Suzano.png": {
+      "sha256": "2ea3d9d6a6d0872408392a3581b1092d9d9817d8f999c525c6d42f51383436ec",
+      "type": "image/png"
+    },
+    "Icones/Syn.png": {
+      "sha256": "1c20ea9ea6483c511b429074d37212a1df484ee4059616ba18205f655c99539b",
+      "type": "image/png"
+    },
+    "Icones/São Carlos.png": {
+      "sha256": "08fade4537dc28b24bff99ca6463acafc9648dc687d2a5ff559def2ce762533c",
+      "type": "image/png"
+    },
+    "Icones/São Martinho.png": {
+      "sha256": "e1fcb5a688f94059870cfb11495396aea121164dc0c2b01127bc3031b6ab62b6",
+      "type": "image/png"
+    },
+    "Icones/T4F.png": {
+      "sha256": "0bb9e18a82c155a402205a3ef886a7e8e3d2d3e6b060fcddedc33ba91e9d941c",
+      "type": "image/png"
+    },
+    "Icones/TC.png": {
+      "sha256": "a0a49548edc09bf68f6c7ee3590ac3a19599a7a92fa767a1b7a512c3c0ced42e",
+      "type": "image/png"
+    },
+    "Icones/TOTVS.png": {
+      "sha256": "77f1c13e103fc0bb673eb004722e137585f73e219c58d2d98d6a5a1a2330e6c6",
+      "type": "image/png"
+    },
+    "Icones/Taesa.png": {
+      "sha256": "a6b58b50a680f1fa79dada6da38ebb2df09160e3ba8947868821c89dc2a0e6bb",
+      "type": "image/png"
+    },
+    "Icones/Taurus Armas.png": {
+      "sha256": "c67475c0cf2ca5874e4c2cc4810beff23824aa80301da67962246bd9b32140fd",
+      "type": "image/png"
+    },
+    "Icones/Technos.png": {
+      "sha256": "a7e6add398785b987c6ffe7bf85ceb64065e88310f3cc9b799268c4f3809ec1a",
+      "type": "image/png"
+    },
+    "Icones/Tecnisa.png": {
+      "sha256": "473296a91db9fc53e0a773aefcc131d0f283d280a34da1f3f95fe177d037fe52",
+      "type": "image/png"
+    },
+    "Icones/Tegma.png": {
+      "sha256": "c630f342e4513654bc82e4427b1d57ad357cd197af8c420aae0c24096f5604a0",
+      "type": "image/png"
+    },
+    "Icones/Tegra.png": {
+      "sha256": "54de4b831e9d5e56b4d721cb571da7823930bc2dd6964e8b0dfce9e3cb8f8d86",
+      "type": "image/png"
+    },
+    "Icones/Teka.png": {
+      "sha256": "87eddceb3f2e9900f07c74c647a96f561496aa0d4fc1f804fd8380540a155317",
+      "type": "image/png"
+    },
+    "Icones/Telebras.png": {
+      "sha256": "d64291c28389e3aacfaf6caa9887dfa85ef974059de70997434c5077c86519f6",
+      "type": "image/png"
+    },
+    "Icones/Telefônica.png": {
+      "sha256": "b0e0ef0b1bea919f56f270ea3995cd1f7f672ad440b1a6a925c9bb0d1c0734ab",
+      "type": "image/png"
+    },
+    "Icones/Tenda.png": {
+      "sha256": "39963389d2c2ca6d1516d8e80627067274e24f500c053d61e984cec389cf52f7",
+      "type": "image/png"
+    },
+    "Icones/Terra Santa.png": {
+      "sha256": "489c0bf2781f0edfeb227aedeee3d40ffba37cfb03c190930ff77453b83c7c31",
+      "type": "image/png"
+    },
+    "Icones/Tim.png": {
+      "sha256": "dc01a72a0019b4d429086e78b995529d9410981f14edb6c21ee8c1976de0f5d1",
+      "type": "image/png"
+    },
+    "Icones/Track&Field.png": {
+      "sha256": "861eef4860c6bd8547f0a4f07902efe9f1bf1eeb79708aae5a929d41bc00fa43",
+      "type": "image/png"
+    },
+    "Icones/Trisul.png": {
+      "sha256": "450cb06367fbf14a822244608f3759be2621973d50ea8253b5ea26c21872a3b5",
+      "type": "image/png"
+    },
+    "Icones/Triunfo.png": {
+      "sha256": "81091ba1ba89d4eea76c45cb3e54b7baf63167696b1e72c6864cd2bc093e8aac",
+      "type": "image/png"
+    },
+    "Icones/Tronox.png": {
+      "sha256": "7d0114dec05752f4f752bdec0fe59b94f7fec4e077129d025469b58efbdb660b",
+      "type": "image/png"
+    },
+    "Icones/Tupy.png": {
+      "sha256": "8c6b5bf4f709aeea40479bea613a2fe336bbd1c375c10157428852748f5e2d42",
+      "type": "image/png"
+    },
+    "Icones/Ultra.png": {
+      "sha256": "2504279d63605b9e037be112374103e9634dea439e1380f6c2759346c3811794",
+      "type": "image/png"
+    },
+    "Icones/Unicasa.png": {
+      "sha256": "faf51f6a8be820613de8649087b01c572ddc420947ff3556053a88b4e24ce3e0",
+      "type": "image/png"
+    },
+    "Icones/Unidas.png": {
+      "sha256": "9b805e976bedf0c52a64540a8e9c59ab2453ffc9b84aa1ab33b979472fe122b5",
+      "type": "image/png"
+    },
+    "Icones/Unifique.png": {
+      "sha256": "29bcc9c407acebd794e3c4065ca8476e0cf2edf8fcb20c8440d36e74a5d62d38",
+      "type": "image/png"
+    },
+    "Icones/Unipar Carbocloro.png": {
+      "sha256": "e9e9ba181ecf6970a76971365eac609035d0610ac70a1acab7a92531a57f3725",
+      "type": "image/png"
+    },
+    "Icones/Unipar.png": {
+      "sha256": "e9e9ba181ecf6970a76971365eac609035d0610ac70a1acab7a92531a57f3725",
+      "type": "image/png"
+    },
+    "Icones/Usiminas.png": {
+      "sha256": "2c310f9444ff0997abf1befebc7cd885fcd068b623b224c49f8bc7c60185d151",
+      "type": "image/png"
+    },
+    "Icones/VINCI COMPASS.png": {
+      "sha256": "bc4e85778dccd8b8be0b7a857f35e670a2293555d96792d6ae801ca5db873415",
+      "type": "image/png"
+    },
+    "Icones/Vale.png": {
+      "sha256": "68724273418771d439890227b3059220c8cd98db72ae00c80ceae31b0a806af5",
+      "type": "image/png"
+    },
+    "Icones/Valid.png": {
+      "sha256": "f501f388a0cb2f220e20b827e4810d0e9d5c1f03c6ae6d17751f388c2763ae28",
+      "type": "image/png"
+    },
+    "Icones/Vamos.png": {
+      "sha256": "1b03315908b1b4df909417aaf936370b59461334bc8d7933d90e3f8f55dea017",
+      "type": "image/png"
+    },
+    "Icones/Vasta.png": {
+      "sha256": "4d278936cbfe29801b1dda5e66217b87ea0f6d2448e620feabae2242a6963021",
+      "type": "image/png"
+    },
+    "Icones/VejaMaisConferencias.png": {
+      "sha256": "877c26836fe020fd4ed1c1bca70f3185062f275a25875db9711c1a03dab3d86f",
+      "type": "image/png"
+    },
+    "Icones/VejaMaisDivulgacoes.png": {
+      "sha256": "89767cae2f7a62bcd025b12caee151fc848e54ef920991ad8c8ab77643838f21",
+      "type": "image/png"
+    },
+    "Icones/VejaMaisInvestorDay.png": {
+      "sha256": "2d31e3579929897c6750aa02df784f7b9f8ad3f995e23ecc352d1b41aa180d0d",
+      "type": "image/png"
+    },
+    "Icones/Verde Agritech.png": {
+      "sha256": "bde748e8dbbbf2411afc5c681189e5f2840c9609941e3010b61065f5b82cfbe1",
+      "type": "image/png"
+    },
+    "Icones/Veste.png": {
+      "sha256": "1adaf3aeaf7cda1605f1f21283a9674eb2cb6aba41989205e96a5757419dd69d",
+      "type": "image/png"
+    },
+    "Icones/Via.png": {
+      "sha256": "43fe1d62ebaee7b703fec44bbda2eb64c17b7a5c49181f8ca9e39f33dc9fd615",
+      "type": "image/png"
+    },
+    "Icones/Vibra.png": {
+      "sha256": "84c42dcd6221e1cfd2fb10e4d6e369139f647e4469b984cfff2cab517f9d78ca",
+      "type": "image/png"
+    },
+    "Icones/Vinci Partners.png": {
+      "sha256": "309eaf18ddf3ef3f4cd89741b9d02f351ca99524340cdb95de433c1608120308",
+      "type": "image/png"
+    },
+    "Icones/Vitru.png": {
+      "sha256": "426cd5b66e12d0edc06d75eff3e3b53c36f71c255a0672b77291ef0d9a81ab7a",
+      "type": "image/png"
+    },
+    "Icones/Vittia.png": {
+      "sha256": "86ffd84df6e463770f5f4809323de1631755068c54eac1d7661a6e378e134a15",
+      "type": "image/png"
+    },
+    "Icones/Vivara.png": {
+      "sha256": "2cf9ab90635e9cbf824e90145f7972056951fca9397918145ff4c6158edb791b",
+      "type": "image/png"
+    },
+    "Icones/Viveo.png": {
+      "sha256": "2fefe3aa4d5c1221a481ac0d9487d2922a150a890320e9d529675de3ef1b72b2",
+      "type": "image/png"
+    },
+    "Icones/Viver.png": {
+      "sha256": "b66e4c4b0376647e83445b4887d2482aae3c6f652417ed69446750bba66c354d",
+      "type": "image/png"
+    },
+    "Icones/Votorantim Cimentos.png": {
+      "sha256": "eccae8088dd582393e1b645ce62db6851b8a03bce2efdb12f01b3f00a29cad5b",
+      "type": "image/png"
+    },
+    "Icones/Vrental.png": {
+      "sha256": "ea3314b845ce2c7a3c8ad1e636ebcefa9cea0f1eab2ca77e38ff2a92ff47f5cf",
+      "type": "image/png"
+    },
+    "Icones/Vtex.png": {
+      "sha256": "d91e54c4d09daeb2cf3da7264e447c672216c5ad4c4fb82cde866a714dad9c4f",
+      "type": "image/png"
+    },
+    "Icones/Vulcabras.png": {
+      "sha256": "60d6a3012027c63fb32e2c996995fd5c25547d96fb54a26efb50f196327d9331",
+      "type": "image/png"
+    },
+    "Icones/WDC Networks.png": {
+      "sha256": "485e4e1d8af58f257b3838d9c1919929619415349da948ff15f21bd4192a4571",
+      "type": "image/png"
+    },
+    "Icones/Westwing.png": {
+      "sha256": "9813372d5a80bc68c3a5bd7947c260a7928b1155574976c38da4b3e838105dcc",
+      "type": "image/png"
+    },
+    "Icones/Wetzel.png": {
+      "sha256": "c615979a8f187d4ba1fde0f7ccec161e93359a9c813ab123d5749f2cc772a6cc",
+      "type": "image/png"
+    },
+    "Icones/Wilson Sons.png": {
+      "sha256": "75381748a258791308ea756a40d2fc9644836dcdfd3182607dcd9235befcbeb8",
+      "type": "image/png"
+    },
+    "Icones/Wiz.png": {
+      "sha256": "a639d1a6b21fe4f374754d9d7027a837719d325b78c7ae4e1943e3bb5b30b5af",
+      "type": "image/png"
+    },
+    "Icones/XP.png": {
+      "sha256": "a5d1ef0efa2858e510524775d31a5effaab7d2e602e33c9c4c8f2a069f302667",
+      "type": "image/png"
+    },
+    "Icones/Yduqs Part.png": {
+      "sha256": "d120469aac05564c7dbd36bde6565bcc7648665664308a12dff845b338fb5397",
+      "type": "image/png"
+    },
+    "Icones/Zamp.png": {
+      "sha256": "8a1b081c946037ef82f531c03d9c7c60763500693888c8028d13cb6bc41046c9",
+      "type": "image/png"
+    },
+    "Icones/Zenvia.png": {
+      "sha256": "723f008b857778c05450c2c744db9e164c649d972f1bf59832e2cf57b3b3967c",
+      "type": "image/png"
+    },
+    "Icones/Zilor.png": {
+      "sha256": "f4d34dfffd7f3e7e705aa5da55431f1315b7a91d027998d8053b20319176a5d2",
+      "type": "image/png"
+    },
+    "Icones/abc brasil.png": {
+      "sha256": "81a37256f4d64f3ef019ed307392b05f1d6f083e3a363be683b0a95c0a85fda1",
+      "type": "image/png"
+    },
+    "Icones/banco abc.png": {
+      "sha256": "81a37256f4d64f3ef019ed307392b05f1d6f083e3a363be683b0a95c0a85fda1",
+      "type": "image/png"
+    },
+    "Icones/d1000.png": {
+      "sha256": "3a539e47e94c0233963c2307149e7414600f5f3132d469bb283eb63720db8f46",
+      "type": "image/png"
+    },
+    "Icones/foresea.png": {
+      "sha256": "00b2e272c376344a9087c5983fe948abdcab808a7ab99b74756783b7cedf7165",
+      "type": "image/png"
+    },
+    "Icones/picpay.png": {
+      "sha256": "2c795ed0f9ee10d49025abfc13ac7834e514924b6fbd806b1d51c7965ae1df73",
+      "type": "image/png"
+    },
+    "Icones/weg.png": {
+      "sha256": "388c59cebf484e2fb678ab81351465e6cf718e38ac1ab8efe1af1166e94805a4",
+      "type": "image/png"
+    },
+    "Icones/Ânima.png": {
+      "sha256": "27d6fc21e2f10ed8885e2fb43251bc53ec6b564ea13c17218e564c6ba1e33efb",
+      "type": "image/png"
+    }
+  }
+}
