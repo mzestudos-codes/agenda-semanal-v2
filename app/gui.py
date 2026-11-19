@@ -9,7 +9,6 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from PIL import Image, ImageTk
-import sv_ttk
 from .mercado import run
 from . import github_icons as gh
 
@@ -29,7 +28,6 @@ def main():
     root.rowconfigure(2, weight=1)
 
     # Sun Valley ttk: tema claro com estilos nativos consistentes.
-    sv_ttk.set_theme('light')
     style = ttk.Style(root)
     style.configure('Header.TLabel', font=('Segoe UI', 22, 'bold'))
     style.configure('Section.TLabel', font=('Segoe UI', 12, 'bold'))
